@@ -1,0 +1,40 @@
+@charset "utf-8";
+/* CSS Document */
+
+.Content_Header{
+	
+	width: 100%;
+	height: auto;
+	
+	border-bottom: thick solid black;
+	
+	clear: both;
+}
+
+.Content_Icon{
+	
+	margin: 20px;
+	
+	float: left;
+	
+	border:thick solid rgba(57,57,57,1.00);
+	
+	border-radius: 100px;
+	
+}
+
+#Content_Title{
+	
+	margin-left: 60px;
+	margin-top: 50px;
+	float: left;
+}
+
+#Content_Author{
+	
+	float: left;
+	
+	margin-top: 55px;
+	margin-left: 400px;
+	
+}

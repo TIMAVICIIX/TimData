@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation">
+
+   <fragment
+       android:id="@+id/board_fragment"
+       android:name="com.example.stardrawing.mainview.board.BoardFragment"
+       tools:layout="@layout/fragment_board" />
+
+    <fragment
+        android:id="@+id/painting_fragment"
+        android:name="com.example.stardrawing.mainview.painting.PaintingFragment"
+        tools:layout="@layout/fragment_painting" />
+
+    <fragment
+        android:id="@+id/center_fragment"
+        android:name="com.example.stardrawing.mainview.center.CenterFragment"
+        tools:layout="@layout/fragment_center" />
+
+    <fragment
+        android:id="@+id/community_fragment"
+        android:name="com.example.stardrawing.mainview.center.CenterFragment"
+        tools:layout="@layout/fragment_community" />
+
+    <fragment
+        android:id="@+id/personal_fragment"
+        android:name="com.example.stardrawing.mainview.personal.PersonalFragment"
+        tools:layout="@layout/fragment_personal" />
+
+
+
+
+
+</navigation>

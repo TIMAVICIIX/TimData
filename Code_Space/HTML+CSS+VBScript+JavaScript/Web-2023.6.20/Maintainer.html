@@ -1,0 +1,297 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tim管理界面</title>
+<link type="text/css" rel="stylesheet" href="SignDir/Standard_Tim.css">
+</head>
+	
+<script type="text/javascript" src="Js/Jquery/jquery.min.js"></script>	
+<script type="text/javascript" src="Js/Maintainer.js"></script>	
+	
+<body>
+	
+	<form name="Upload" id="Upload" action="../asp/UpLoad.asp" method="POST">
+	
+	<div id="header">
+		<img src="src/login_view_cover_robo_logo.png" alt="Robo's Logo">
+		<p id="headerText">---Tim论坛 管理界面---&nbsp; &nbsp;</p>
+	</div>
+	
+	
+	
+		<aside id="User_Area">
+		
+			<div id="User_Info">
+	
+				<img src="src/Robo.png" width="50px" height="50px" alt="用户头像" id="User_Icon">	
+
+
+					<p	id="User_ID" name="user_id">
+						管理账号：
+					</p>
+
+					<div class="First_meun">
+				
+						<ul>
+
+						<li>
+
+							<a href="javascript:void(0)" id="Create_Forum" onclick="Create_Visible(0)">
+								创建帖子&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							</a>
+
+						</li>
+
+						</ul>	
+					
+					</div>
+				
+					
+					<div class="First_meun">
+						
+						<ul>
+
+						<li>
+
+							<a href="javascript:void(0)" id="Froum_Center" onclick="Transfrom('Inside/Main_Frame.asp')">
+								首页&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;
+							</a>
+
+						</li>
+
+						</ul>					
+						<ul>
+
+						<li>
+
+						<a href="#">帖子分类&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+
+						<ul class="Second_meun">
+
+						<li>
+								<a href="javascript:void(0)" id="Forum_Passgae" onclick="Transfrom('Inside/Passage_Frame.asp')">
+									文章&nbsp; &nbsp;&nbsp; &nbsp;
+								</a>
+							</li>
+
+						<li>
+								<a href="javascript:void(0)" id="Forum_Tip"
+								   onclick="Transfrom('Inside/Tip_Frame.asp')">
+									随记&nbsp; &nbsp;&nbsp; &nbsp;
+								</a>
+							</li>
+
+						</ul>
+
+						</li>
+
+						</ul>
+
+						<ul>
+
+						<li>
+
+						<a href="#">我的发布&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+
+						<ul class="Second_meun">
+
+						<li>
+							<a href="javascript:void(0)" id="Forum_Pulish_All" 
+							   onclick="Transfrom('Inside/Publish_All_Frame.asp')">
+									全部&nbsp; &nbsp;&nbsp; &nbsp;
+								</a>
+							</li>
+
+						<li>
+							<a href="javascript:void(0)" id="Forum_Pulish_Non"  onclick="Transfrom('Inside/Publish_Non_Frame.asp')">
+									未发布&nbsp; &nbsp;&nbsp; &nbsp;
+								</a>
+							</li>
+						
+						<li>
+							<a href="javascript:void(0)" id="Forum_Pulish_Has"    onclick="Transfrom('Inside/Publish_Has_Frame.asp')">
+									已发布&nbsp; &nbsp;&nbsp; &nbsp;
+								</a>
+							</li>
+
+						</ul>
+
+						</li>
+
+						</ul>
+						<ul>
+
+						<li>
+
+						<a href="#">设置&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</a>
+
+						<ul class="Second_meun">
+
+						<li>
+							<a href="javascript:void(0)" id="Change_Id" onclick="Create_Visible(1)">
+								切换账号&nbsp; &nbsp; &nbsp; &nbsp;
+							</a>
+							</li>
+
+						<li><a href="Login_Main.html" title="返回登录界面">返回登录页面&nbsp; &nbsp;&nbsp; &nbsp;</a></li>
+
+						</ul>
+
+						</li>
+
+						</ul>
+
+					</div>
+
+			
+				</div>
+			
+		</aside>
+		
+		<div id="exlpore">
+		
+			<iframe id="Center_frame" src="Inside/Main_Frame.asp" style="width: 100%;height: 100%" frameborder="0">
+			
+			</iframe>
+		
+		</div>
+		
+	
+	<div id="footer_in_Main">
+	
+		<p>
+			&copy; 2023 , Robo Fraternity Club<br>
+			All trademarks and rigistered trademakers appearing on this site are the 
+			property of their respective owners.
+		</p>
+	
+	</div>
+	
+	
+	<!--Small Windows-->
+	
+	<div id="Create_new_Forum" >
+
+		
+
+					<table id="Create_Area" width="500px" height="400px" border="0" align="center">
+			  <tbody>
+
+				  <tr>
+					  <td align="left"><input type="button" id="Back_index" value="返回" onClick="Create_Visible(0)" > </td>
+				  <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;创作一篇论坛! </td>
+					  <td align="right"><input type="button" id="Submit_index" value="上传" onClick="Upload_Forum()" > </td>
+				</tr>
+
+				<tr>
+				  <td align="left">标题：</td>
+				  <td colspan="2" align="left"> <input type="text" size="32" id="forum_title" name="forum_title" placeholder="请输入标题"> </td>
+				</tr>
+				<tr>
+					<td align="left">文章类型：</td>
+					<td colspan="2" align="left">
+						  <input type="radio" name="PassageORTip" value="文章" id="PassageORTip_0">
+						  文章
+							&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+						  <input type="radio" name="PassageORTip" value="随记" id="PassageORTip_1">
+						  随记
+					</td>
+				</tr>
+				  <tr>
+					<td align="left">发布状态：</td>
+					<td colspan="2" align="left">
+						  <input type="radio" name="publish_state" value="未发布" id="publish_state_0">
+						  不发布
+							&nbsp;&nbsp;&nbsp;&nbsp;
+						  <input type="radio" name="publish_state" value="发布" id="publish_state_1">
+						  发布
+					</td>
+				</tr>  
+				<tr>
+				  <td colspan="3" height="50px" align="left" id="forum_content" name="forum_content">
+							输入论坛内容：	
+					</td>
+				</tr>
+				<tr>
+				  <td colspan="3" rowspan="2" align="center" >
+					  <textarea id="Create_Content" rows="17" cols="67" style="resize: none" name="Create_Content" placeholder="请输入内容"></textarea>
+					</td>
+				</tr>
+				<tr>
+					<input	id="Upload_id" name="Upload_id" style="visibility: hidden;">
+				</tr>
+			  </tbody>
+			</table>
+			
+	
+	</div>
+		
+</form>	
+	
+<form name="Login_Form" id="Login_Form" action="asp/LoginCheck.asp" method="post">
+
+	<div id="Re_Login">
+		
+		<table id="Re_Login_Table" width="400" height="200" align="center" background="src/new_painting_create_view_background.png">
+  <tbody>
+    <tr>
+		
+		<td align="left">
+			<input type="button" value="返回" onclick="Create_Visible(1)"> 
+		</td>
+		
+		
+		<td colspan="2" align="left">
+			<p class="LoginArea">
+				&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;↓PLease Login↓	
+			</p>
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户账号：
+		  </p>
+		</td>
+		<td colspan="2" align="left">
+			<input id="re_user_id" type="text" size="30" oninput="value=value.replace(/[^\d]/g,'')" name="user_id" placeholder="请输入用户账号">
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户密码：
+		  </p>
+		</td>
+      <td colspan="2" align="left">
+			<input id="re_user_pw" type="password" size="30" name="user_pw" placeholder="请输入用户密码">
+		</td>
+    </tr>
+    <tr>
+      <td>
+		<p class="LoginArea">
+		<a href="" tltie="点击进行密码找回">忘记密码？</a>  
+		  </p>
+		</td>
+      <td>
+		
+		  <input onClick="reLogin()" type="button" value="  登          录  " name="LoginBtn">
+		
+		</td>
+      <td>
+		  <p class="LoginArea" align="center">
+		  	<a href="SignUp.html" tltie="点击进行账号注册" >注册账号</a>
+		  </p>
+		</td>
+    </tr>
+  </tbody>
+</table>
+
+	
+	</div>
+	</form>
+	
+
+</body>
+</html>

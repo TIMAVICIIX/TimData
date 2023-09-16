@@ -1,0 +1,60 @@
+@charset "utf-8";
+/* CSS Document */
+
+h5{
+	
+	line-height: 0px;
+	
+}
+
+#Borader_Explore{
+	
+
+	font-family: Cambria, "Hoefler Text", "Liberation Serif", Times, "Times New Roman", "serif";
+	font-size: 20px;
+	
+
+	text-align: center;
+}
+
+.Forum_item{
+	
+	border: thin solid rgba(72,72,72,1.00);
+	border-radius: 20px;
+	
+	margin-top: 40px;
+	
+}
+
+.Forum_Icon{
+	
+	border-radius: 40px;
+	width: 70px; 
+	height: 70px;
+	
+}
+
+.Forum_Title{
+
+	text-align: left;
+	
+}
+ 
+.Forum_Title h5{
+	
+	line-height: 0;
+	margin: 0px;
+	padding: 0px;
+	
+}
+
+.Forum_Content{
+	
+	text-align: left;
+	font-size: 70%;
+	border: thin solid rgba(0,0,0,1.00);
+}
+
+#Forum_Space{
+	
+}

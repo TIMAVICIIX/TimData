@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/new_painting_create_view_background">
+
+    <com.example.stardrawing.mainview.painting.paintingclass.NewBoardCreate
+        android:id="@+id/newDrawContent"
+        android:layout_width="600dp"
+        android:layout_height="350dp"
+        android:layout_centerInParent="true"
+        android:background="#ffffff"
+        android:clickable="true" />
+
+    <Button
+        android:layout_width="15dp"
+        android:layout_height="40dp"
+        android:layout_centerInParent="true"
+        android:layout_alignParentStart="true"
+        android:background="@drawable/new_painting_create_side_noselect_button"
+        android:id="@+id/ShowSideSelectBtn"/>
+
+    <LinearLayout
+        android:layout_width="60dp"
+        android:layout_height="300dp"
+        android:layout_alignParentLeft="true"
+        android:layout_centerInParent="true"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:id="@+id/new_painting_create_side_selectlayout">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="8"
+            android:orientation="vertical"
+            android:background="@drawable/new_painting_create_side_select_cell">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+
+                <Button
+                    android:id="@+id/new_painting_create_paintbtn"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/new_painting_create_side_select_paintbtn" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/new_painting_create_side_select_boardbtn"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/new_painting_create_boardbtn"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/new_painting_create_side_select_erasebtn"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/new_painting_create_erasebtn"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/new_painting_create_side_select_shapebtn"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/new_painting_create_shapebtn"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:background="@drawable/new_painting_side_create_select_movebtn"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/new_painting_create_movebtn"/>
+            </RelativeLayout>
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1">
+                <Button
+                    android:layout_width="35dp"
+                    android:layout_height="35dp"
+                    android:background="@drawable/new_painting_side_create_select_robohleperbtn"
+                    android:layout_centerInParent="true"
+                    android:id="@+id/new_painting_create_robohelperbtn"/>
+            </RelativeLayout>
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="3">
+
+            <Button
+                android:id="@+id/HideSideSelectBtn"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/new_painting_create_side_isselect_button" />
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="250dp"
+        android:layout_height="40dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentTop="true"
+        android:background="@drawable/new_painting_top_select_cell_background"
+        android:orientation="horizontal"
+        android:visibility="invisible"
+        android:id="@+id/new_painting_create_top_selectlayout">
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/new_painting_create_top_select_laststepbtn"
+                android:layout_centerInParent="true"
+                android:id="@+id/new_painting_create_laststepbtn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/new_painting_create_top_select_nextstep"
+                android:layout_centerInParent="true"
+                android:id="@+id/new_painting_create_nextstepbtn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/new_painting_create_top_select_cleanbtn"
+                android:layout_centerInParent="true"
+                android:id="@+id/new_painting_create_cleanbtn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/new_painting_create_top_select_createranderbtn"
+                android:layout_centerInParent="true"
+                android:id="@+id/new_painting_create_newranderbtn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+            <Button
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:background="@drawable/new_painting_create_top_select_savebtn"
+                android:layout_centerInParent="true"
+                android:id="@+id/new_painting_create_savebtn"/>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="1">
+
+            <Button
+                android:id="@+id/new_painting_create_leavebtn"
+                android:layout_width="30dp"
+                android:layout_height="25dp"
+                android:layout_centerInParent="true"
+                android:background="@drawable/new_painting_create_top_select_leavebtn" />
+        </RelativeLayout>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/new_painting_create_robohelper"
+        android:visibility="invisible">
+
+        <ImageView
+            android:layout_width="180dp"
+            android:layout_height="180dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/new_painting_create_robohelper_select_background"/>
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerInParent="true"
+            android:background="@drawable/new_painting_create_robohelper_logo" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/center_Scroll"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F7F6E7"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="95dp"
+            android:layout_marginTop="2dp">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:background="@drawable/center_view_remind" />
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="300dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/center_view_jumptoboard"
+                    android:id="@+id/center_view_jumptoboardBtn"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1">
+
+                <Button
+                    android:layout_width="170dp"
+                    android:layout_height="250dp"
+                    android:layout_centerInParent="true"
+                    android:background="@drawable/center_view_jumptopainting"
+                    android:id="@+id/center_view_jumptopaintingBtn"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="170dp">
+            
+            <ImageView
+                android:layout_width="200dp"
+                android:layout_height="20dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerInParent="true"
+                android:background="@drawable/center_view_postandcontent"/>
+
+
+            <com.youth.banner.Banner
+                android:id="@+id/postCenterBanner"
+                android:layout_width="325dp"
+                android:layout_height="130dp"
+                android:layout_alignParentBottom="true"
+                android:layout_centerInParent="true"
+                android:layout_marginBottom="20dp"
+                app:banner_indicator_selected_color="#FFE8C3"
+                app:banner_radius="20dp" />
+
+
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/CenterRecommendRecycleView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="#FFE8C3"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="#FFE8C3">
+
+            <ImageView
+                android:layout_width="100dp"
+                android:layout_height="10dp"
+                android:background="@drawable/recycle_bottom_text"
+                android:layout_centerInParent="true"
+                android:layout_alignParentTop="true"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>

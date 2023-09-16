@@ -1,0 +1,27 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: daw - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\小吴同~1\AppData\Local\Temp\RSPD77A.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/daw.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\学习草稿\daw.c"
+]
+Creating command line "cl.exe @"C:\Users\小吴同~1\AppData\Local\Temp\RSPD77A.tmp"" 
+<h3>Output Window</h3>
+Compiling...
+daw.c
+d:\vc\vc98\include\eh.h(32) : fatal error C1189: #error :  "eh.h is only for C++!"
+执行 cl.exe 时出错.
+
+
+
+<h3>Results</h3>
+daw.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

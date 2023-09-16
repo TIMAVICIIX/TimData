@@ -1,0 +1,93 @@
+<!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tim_SignUp</title>
+
+<link type="text/css" rel="stylesheet" href="SignDir/Standard_Tim.css">
+<script src="Js/Register.js" type="text/javascript" charset="utf-8"></script>	
+</head>
+
+<body>	
+	<div id="header">
+		<img src="src/login_view_cover_robo_logo.png" alt="Robo's Logo">
+		<p id="headerText">---Tim论坛---&nbsp; &nbsp;</p>
+	</div>
+	
+<div id="LoginCover">
+	
+	<form name="RegisterForm" id="RegisterForm" method="post" action="../asp/Register.asp">
+		<table width="400" height="200" border="0" align="center" background="src/new_painting_create_view_background.png"
+			   class ="Login_Sign_Table">
+			
+  <tbody>
+    <tr>
+		<td colspan="3">
+			<p class="LoginArea">
+				↓PLease Sign_Up↓	
+			</p>
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户昵称：
+		  </p>
+		</td>
+		<td colspan="2" align="left">
+			<input type="text" size="30" name="UserName" id="UserName" placeholder="请输入用户昵称(可重复)">
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户密码：
+		  </p>
+		</td>
+      <td colspan="2" align="left">
+			<input type="password" size="30" name="UserPW1" id="UserPW1" placeholder="请输入用户密码">
+		</td>
+    </tr>
+	  <tr>
+	  		<td>
+			<p class="LoginArea" align="right">
+		  		确定密码：
+		  </p>
+		</td>
+      <td colspan="2" align="left">
+			<input type="password" size="30" name="UserPW2" id="UserPW2" placeholder="请再次输入用户密码">
+		</td>
+	  </tr>
+    <tr>
+      <td>
+		<p class="LoginArea">
+		<a href="Login_Main.html" tltie="点击返回登录页面">返回登录</a>  
+		  </p>
+		</td>
+      <td colspan="2">
+		
+		  <input type="button" value="  注册  " name="RegisterBtn" onClick="Intent_Register()">
+		
+		</td>
+    </tr>
+  </tbody>
+</table>
+</form>
+</div>
+	
+
+	
+<div id="footer_in_sign">
+	
+	<p>
+		&copy; 2023 , Robo Fraternity Club<br>
+		All trademarks and rigistered trademakers appearing on this site are the 
+		property of their respective owners.
+	</p>
+	
+	</div>
+	
+	
+</body>
+	
+</html>

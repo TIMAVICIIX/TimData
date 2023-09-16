@@ -1,0 +1,35 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: dadw - Win32 Debug--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating temporary file "C:\Users\–°Œ‚Õ¨~1\AppData\Local\Temp\RSPD578.tmp" with contents
+[
+/nologo /MLd /W3 /Gm /GX /ZI /Od /D "WIN32" /D "_DEBUG" /D "_CONSOLE" /D "_MBCS" /Fp"Debug/dadw.pch" /YX /Fo"Debug/" /Fd"Debug/" /FD /GZ /c 
+"D:\—ßœ∞≤›∏Â\dadw.cpp"
+]
+Creating command line "cl.exe @"C:\Users\–°Œ‚Õ¨~1\AppData\Local\Temp\RSPD578.tmp"" 
+<h3>Output Window</h3>
+Compiling...
+dadw.cpp
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2143: syntax error : missing ')' before '{'
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2059: syntax error : ')'
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2143: syntax error : missing ';' before '{'
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2143: syntax error : missing ';' before '}'
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2143: syntax error : missing ';' before ','
+D:\—ßœ∞≤›∏Â\dadw.cpp(46) : error C2059: syntax error : ')'
+D:\—ßœ∞≤›∏Â\dadw.cpp(47) : error C2065: 'P1' : undeclared identifier
+D:\—ßœ∞≤›∏Â\dadw.cpp(47) : error C2228: left of '.Print_Format' must have class/struct/union type
+D:\—ßœ∞≤›∏Â\dadw.cpp(50) : warning C4508: 'main' : function should return a value; 'void' return type assumed
+÷¥–– cl.exe  ±≥ˆ¥Ì.
+
+
+
+<h3>Results</h3>
+dadw.obj - 1 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

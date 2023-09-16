@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<style type="text/css">
+    #box1{
+        width: 500px;
+        height: 500px;
+        border-style: solid;
+    }
+    #box2{
+        width: 500px;
+        height: 100px;
+        border-style: solid;
+    }
+</style>
+<body>
+<div id="box1">
+    <div id="box2">
+        <button id="btn1">添加链接</button>
+    </div>
+    <ul id="ul1">
+        <li><a href="#" class="a1">超链接</a></li>
+        <li><a href="#" class="a1">超链接</a></li>
+        <li><a href="#" class="a1">超链接</a></li>
+        <li><a href="#" class="a1">超链接</a></li>
+    </ul>
+</div>
+</body>t
+</html>
+<script type="text/javascript">
+    window.onload=function () {
+        var ul1=document.getElementById("ul1");
+        ul1.onclick=function (event) {  // 之所以把onclick绑定给ul1是因为事件的冒泡
+           event=event||window.event;   //解决兼容问题
+            if(event.target.className=="a1"){
+                alert("你就是个猪脑袋")
+            }
+        }
+        var btn1=document.getElementById("btn1");
+        btn1.onclick=function () {
+            var li=document.createElement("li");
+            li.innerHTML="<a href=\'#\'class=\'a1\'>超链接</a>";
+            ul1.appendChild(li);
+        }
+    }
+</script>

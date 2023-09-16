@@ -1,0 +1,95 @@
+  <!doctype html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Tim_SignUp</title>
+<link type="text/css" rel="stylesheet" href="SignDir/Standard_Tim.css">
+</head>
+
+<body>
+	
+	<div id="header">
+		<img src="src/login_view_cover_robo_logo.png" alt="Robo's Logo">
+		<p id="headerText">---Tim论坛---&nbsp; &nbsp;</p>
+	</div>
+	
+<div id="LoginCover">
+	
+	<form action="asp/LoginCheck.asp" method="post" id="LoginForm">
+		<table width="400" height="200" align="center" background="src/new_painting_create_view_background.png">
+  <tbody>
+    <tr>
+		<td colspan="3">
+			<p class="LoginArea">
+				↓PLease Login↓	
+			</p>
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户账号：
+		  </p>
+		</td>
+		<td colspan="2" align="left">
+			<input id="user_id" type="text" name="user_id" oninput="value=value.replace(/[^\d]/g,'')" size="30" placeholder="请输入用户账号(仅限数字)">
+		</td>
+    </tr>
+    <tr>
+      <td>
+			<p class="LoginArea" align="right">
+		  		用户密码：
+		  </p>
+		</td>
+      <td colspan="2" align="left">
+			<input id="user_pw" name="user_pw" type="password" size="30" placeholder="请输入用户密码">
+		</td>
+    </tr>
+    <tr>
+      <td>
+		<p class="LoginArea">
+		<a href="#" tltie="点击进行密码找回">忘记密码？</a>  
+		  </p>
+		</td>
+      <td>
+		
+		  <input type="button" value="  登          录  " name="LoginBtn" onClick="Intent_index()">
+		
+		</td>
+      <td>
+		  <p class="LoginArea" align="center">
+		  	<a href="SignUp.html" tltie="点击进行账号注册" >注册账号</a>
+		  </p>
+		</td>
+    </tr>
+  </tbody>
+</table>
+		
+</form>
+</div>
+	
+	<div id="Tips">
+	<ul>
+		<li>免费注册</li>
+		<li>登录后才能查看论坛</li>
+		<li>每个用户都可以发送帖子</li>
+		<li>希望各位玩的愉快！</li>
+	</ul>
+	</div>
+	
+<div id="footer_in_login">
+	
+	<p>
+		&copy; 2023 , Robo Fraternity Club<br>
+		All trademarks and rigistered trademakers appearing on this site are the 
+		property of their respective owners.
+	</p>
+	
+	</div>
+	
+	
+<script type="text/javascript" src="Js/Jquery/jquery.min.js"></script>	
+<script type="text/javascript" src="Js/Login_Script.js"></script>		
+</body>
+	
+</html>

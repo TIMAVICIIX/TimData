@@ -4,13 +4,13 @@ import math
 def calculator():
     print("欢迎使用命令行计算器！支持以下操作：")
     print("1. 输入数学表达式并按 Enter 计算。")
-    print("     支持的操作符：+（加法），-（减法），*（乘法），/（除法），^（乘方），sqrt（开方）.")
-    print("     例如：2 + 3，4 * 5，sqrt(9)。")
+    print("     支持的操作符：+（加法），-（减法），*（乘法），/（除法），^（乘方），sqrt（开方），sin（正弦），cos（余弦），tan（正切）.")
+    print("     例如：2 + 3，4 * 5，sqrt(9)，sin(30)。")
     print("2. 输入 'list' 查看历史记录。")
-    print("     显示之前的计算历史。")
+    print("     显示之前的计算历史和数据统计操作历史。")
     print("3. 输入 'stats' 进入数据统计模式。")
     print("     输入一个数组以进行统计操作。")
-    print("     支持的统计操作：max（最大值），min（最小值），avg（平均值）。")
+    print("     支持的统计操作：max（最大值），min（最小值），avg（平均值）")
     print("     例如：[1, 2, 3]，max，min，avg。")
     print("     输入 'exit stats' 退出数据统计模式。")
     print("4. 输入 'quit' 退出计算器。")
@@ -107,6 +107,18 @@ def calculator():
 
             # 将sqrt替换为math.sqrt
             expression_eval = expression_eval.replace("sqrt(", "math.sqrt(")
+
+            if "sin(" in expression_eval or "cos(" in expression_eval or "tan(" in expression_eval:
+                # 三角函数计算
+                expression_eval = expression_eval.replace("sin(", "math.sin(math.radians(")
+                expression_eval = expression_eval.replace("cos(", "math.cos(math.radians(")
+                expression_eval = expression_eval.replace("tan(", "math.tan(math.radians(")
+
+                # 加一个括号在后面
+                expression_eval = expression_eval.replace(")", "))")
+
+            # Debug Log
+            # print(expression_eval)
 
             result = eval(expression_eval)
             if isinstance(result, (int, float)):

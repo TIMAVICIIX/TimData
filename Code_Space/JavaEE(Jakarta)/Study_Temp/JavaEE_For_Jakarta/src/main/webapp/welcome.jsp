@@ -28,6 +28,8 @@
     String user = (String) session.getAttribute("user");
     out.print("Welcome! " + user);
 
+    response.setHeader("refresh","60,OnLogin.jsp");
+
 %>
 
 <br>

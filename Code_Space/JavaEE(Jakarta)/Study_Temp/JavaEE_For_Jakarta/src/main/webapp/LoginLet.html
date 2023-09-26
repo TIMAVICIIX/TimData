@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>登录页面</title>
+
+    <style>
+
+        .header {
+            text-align: center;
+        }
+
+    </style>
+
+</head>
+<body>
+<div class="header">
+    <h1>登录吧！</h1>
+    <form action="loginByServlet" method="get">
+        <label>
+            用户名：
+            <input type="text" name="loginName" placeholder="请输入名称">
+        </label>
+        <br>
+        <label>
+            密 码：
+            <input type="text" name="pwd" placeholder="请输入密码">
+        </label>
+        <br>
+        <label>
+            <input type="submit" value="登录" name="LoginBtn">
+        </label>
+    </form>
+</div>
+</body>
+</html>

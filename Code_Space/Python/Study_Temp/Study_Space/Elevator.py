@@ -30,7 +30,7 @@ class Elevator:
 
     def inc_person(self):
         if self.current_person < self.max_person:
-            self.current_person += self.current_person
+            self.current_person += 1
             print("增加了一名乘客")
             self.display_person()
             return 0
@@ -40,7 +40,7 @@ class Elevator:
 
     def des_person(self):
         if self.current_person > 0:
-            self.current_person -= self.current_person
+            self.current_person -= 1
             print("减少了一名乘客")
             self.display_person()
         else:
@@ -78,9 +78,6 @@ class Elevator:
     def auto_stream_fun(self):
         if self.auto_stream:
             self.open_door()
-
-
-
 
 
 def run_experiment(experiment_name, elevator, start_floor, target_floor=None):
@@ -152,7 +149,7 @@ def main():
         print("\n当前楼层:" + str(elevator.current_floor) + "     最高层:10,最底层:-2")
 
         # 提示用户输入目标楼层或退出程序
-        user_input = input("输入目标楼层或输入 'q' 退出程序: ")
+        user_input = input("输入目标楼层\n输入add_person增加电梯乘客，输入leave_person减少乘客\n输入 'q' 退出程序: ")
         if user_input == 'q':
             break
 
@@ -160,11 +157,22 @@ def main():
             elevator.display_person()
             continue
 
+        if user_input == "add_person":
+            elevator.inc_person()
+
+        if user_input == "leave_person":
+            elevator.des_person()
+
+        if user_input == "display":
+            elevator.display_person()
+
         try:
-            target_floor = int(user_input)
-            run_experiment("用户操作：电梯移动到指定楼层", elevator, elevator.current_floor, target_floor)
-        except ValueError:
-            print("无效的输入，请输入一个有效的楼层号或 'q' 退出程序。")
+            if user_input.isdigit():
+                target_floor = int(user_input)
+                run_experiment("用户操作：电梯移动到指定楼层", elevator, elevator.current_floor, target_floor)
+        except Exception as e:
+            print("错误命令：" + str(e))
+            continue
 
 
 if __name__ == "__main__":

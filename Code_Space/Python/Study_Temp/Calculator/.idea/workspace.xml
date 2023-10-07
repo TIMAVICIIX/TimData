@@ -5,23 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a0c3735-42c1-4c12-a367-d5955e492f59" name="更改" comment="Update New File in Study">
-      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/CookieResolve.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/LoginLet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/LoginLet.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/cookie_login.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Study_Space/Elevator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/.idea/webContexts.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/.gitignore" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/modules.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/modules.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/pythonProject.iml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/pythonProject.iml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/.idea/vcs.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/Calculator.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/PythonGUI_Test2023.8.18.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/PythonGUI_Test2023.8.18.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Test.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/Test.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/main.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/main.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Study_Space/Calculator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/Calculator.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Study_Space/Elevator.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/Elevator.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

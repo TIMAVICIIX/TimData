@@ -23,8 +23,12 @@ class CookieResolve : HttpServlet() {
 
             resp?.let {
 
-                val tempLoginName = req.getParameter("loginName")
-                val tempLoginPwd = req.getParameter("password")
+                val tempLoginName = req.getParameter("inputName")
+                //Debug Log:
+                //println(tempLoginName)
+                val tempLoginPwd = req.getParameter("inputPwd")
+                //Debug Log:
+                //println(tempLoginPwd)
                 val tempRemember = req.getParameter("isWrite")
 
                 if (loginName == tempLoginName && password == tempLoginPwd) {

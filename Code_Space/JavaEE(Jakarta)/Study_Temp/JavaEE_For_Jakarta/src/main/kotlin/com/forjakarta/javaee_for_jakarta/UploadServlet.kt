@@ -24,6 +24,10 @@ class UploadServlet : HttpServlet() {
 
                 val fileName = header.substring(header.indexOf("filename=") + 10, header.length - 1)
 
+                if (fileName == "") {
+                    req.getRequestDispatcher("UploadFile.jsp").forward(req, resp)
+                }
+
                 val size = part.size
                 val inputStream = part.inputStream
 
@@ -34,15 +38,20 @@ class UploadServlet : HttpServlet() {
 
                 val downFilePath = "$contextPath/uploadFiles/$fileName"
 
-                val file = File(realPath, fileName)
-                if (!file.exists()) {
+                val file = File(realPath , fileName)
+                if (!file.parentFile.exists()) {
                     //Debug
+//                    print(realPath + "\n")
+//                    println("FosPath:" + realPath + File.separator + fileName)
                     file.mkdirs()
                 }
 
                 var fos: FileOutputStream? = null
 
+
                 try {
+                    //Debug
+
                     fos = FileOutputStream(file)
 
                     var data = ByteArray(1024)

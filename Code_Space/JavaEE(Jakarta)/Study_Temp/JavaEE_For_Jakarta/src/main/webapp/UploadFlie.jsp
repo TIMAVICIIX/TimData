@@ -14,7 +14,7 @@
 
     <form method="POST" action="UploadServlet" enctype="multipart/form-data">
 
-        Choose A File or Multiple File:<input type="file" name="uploadFiles" multiple="multiple"/>
+        Choose A File or Multiple File:<input type="file" name="uploadFiles"/>
         <br>
         <input type="submit" value="Upload">
 

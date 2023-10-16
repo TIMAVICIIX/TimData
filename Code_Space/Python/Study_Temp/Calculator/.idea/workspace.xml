@@ -5,12 +5,9 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a0c3735-42c1-4c12-a367-d5955e492f59" name="更改" comment="Update New File in Study">
-      <change afterPath="$PROJECT_DIR$/../Study_Space/GnatForCollege.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Study_Space/TempGnat.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../Study_Space/TempIfForGnat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/ForthGUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Study_Space/RecongnizeText.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/RecongnizeText.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../Study_Space/TempIfForGnat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/TempIfForGnat.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />

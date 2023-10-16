@@ -48,6 +48,10 @@ TAG_year_vis = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1
 PLAN_year_vis = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]' \
                 '/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]'
 
+# 年份招生计划元素定位地址
+STU_year_vis = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]' \
+               '/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]'
+
 
 # 大学列表提取方法
 def link_university():
@@ -209,21 +213,38 @@ for j in range(university_list_range):
         # 测试URL: https://www.gaokao.cn/school/521
         # 测试结果:测试修改成功,解决Table为一页时任然翻页问题
         # 测试代码如下:
-        # driver.execute_script('window.location.href="https://www.gaokao.cn/school/521";')
+        driver.execute_script('window.location.href="https://www.gaokao.cn/school/143";')
 
         # 点击[分数/计划]按钮
         click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
                      '/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[5]/div[2]', 3)
 
+        # 设置TAG中的二本录取情况
+        TAG_start_year = int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                             '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                             '/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]'
+                                             '/div[1]/div[1]/div[1]', 1))
+
+        # 设置专业分数线的二本录取情况
+        PLAN_start_year = int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                              '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]'
+                                              '/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]'
+                                              '/div[1]/div[1]', 1))
+
+        # 设置招生计划的二本录取情况
+        STU_start_year = int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                             '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]'
+                                             '/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]'
+                                             '/div[1]/div[1]/div[1]/div[1]', 1))
+
+        # Debug
+        # 各信息表的最近年份
+        print(
+            f'该大学的各信息表最近年份\nTAG:{TAG_start_year}\n专业分数线:{PLAN_start_year}\n招生计划:{STU_start_year}\n')
+
         # 第一部分:TAG查找开始
         # 获得现在年份,在现在年份与最终年份之间循环查找,并记录有无二本录取情况
-        # 设置二本录取情况
-        start_year = int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
-                                         '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]'
-                                         '/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]'
-                                         '/div[1]/div[1]/div[1]', 1))
-
-        for i in range(2, (start_year - end_year) + 3):
+        for i in range(2, (TAG_start_year - end_year) + 3):
 
             print('TAG中当前查找年份:' + get_text_method(
                 '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
@@ -274,7 +295,7 @@ for j in range(university_list_range):
         # 进行专业分数线信息查找
         # 第二部分:对专业分数线进行查找,后期可能进行方法抽象优化
         print('\n开始查找专业分数线')
-        for i in range(2, (start_year - end_year) + 2):
+        for i in range(2, (PLAN_start_year - end_year) + 3):
 
             print('\n专业分数线中当前查找年份:' + get_text_method(
                 '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
@@ -343,6 +364,81 @@ for j in range(university_list_range):
                               '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]'
                               '/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]'
                               '/div[1]/span[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[' + str(i) + ']')
+
+        # 进行招生计划信息查找
+        # 第三部分:对招生计划进行查找,后期可能进行方法抽象优化
+        print('\n开始查找招生计划')
+        for i in range(2, (STU_start_year - end_year) + 3):
+
+            print('\n招生计划中当前查找年份:' + get_text_method(
+                '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]'
+                '/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]'
+                '/div[1]/div[1]/div[1]', 0))
+
+            # 选择文科，如果现有文科则不选择，如果没有呈现则击文理科按钮并选择文史，如果没有文科则直接跳过该年份
+            if get_text_method(
+                    '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
+                    '/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]',
+                    0) != '文科':
+
+                click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                             '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]', 1)
+
+                if get_com_num('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                               '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[2]'
+                               '/div[1]/div[1]/div[1]/ul[1]/li', 0) == 2:
+                    click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                                 '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[3]/div[2]'
+                                 '/div[1]/div[1]/div[1]/ul[1]/li[2]', 1)
+
+                else:
+                    print('当前年份无文科信息,切换年份或退出本页面')
+                    change_inner_year(STU_year_vis,
+                                      '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                                      '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/form[1]'
+                                      '/div[1]/div[1]/div[1]/span[1]/div[2]'
+                                      '/div[1]/div[1]/div[1]/ul[1]/li[' + str(i) + ']')
+                    continue
+
+                if get_text_method(
+                        '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
+                        '/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[4]/form[1]'
+                        '/div[1]/div[1]/div[1]/span[1]/div[1]/div[1]/div[1]/div[1]',
+                        0) != '本科二批':
+
+                    click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                                 '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[4]', 1)
+
+                    if get_com_num('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                                   '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[4]'
+                                   '/form[1]/div[1]/div[1]/div[1]/span[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li',
+                                   0) == 2:
+                        click_method(
+                            '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
+                            '/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[4]/form[1]'
+                            '/div[1]/div[1]/div[1]/span[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[2]', 1)
+
+                    else:
+                        print('当前年份无文科信息,切换年份或退出本页面')
+                        change_inner_year(STU_year_vis,
+                                          '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                                          '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/form[1]'
+                                          '/div[1]/div[1]/div[1]/span[1]/div[2]'
+                                          '/div[1]/div[1]/div[1]/ul[1]/li[' + str(i) + ']')
+                        continue
+
+            # 进行二本信息查找
+            # driver.execute_script(f"window.scrollBy(0,70);")
+            get_table_plan('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
+                           '/div[3]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/table[1]')
+
+            print('当前年份文科信息收集完毕,切换年份或退出本页面')
+            driver.execute_script(f"window.scrollBy(0,50);")
+            change_inner_year(STU_year_vis,
+                              '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
+                              '/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]/div[2]/form[1]'
+                              '/div[1]/div[1]/div[1]/span[1]/div[2]'
+                              '/div[1]/div[1]/div[1]/ul[1]/li[' + str(i) + ']')
 
         quit_web_page()
 

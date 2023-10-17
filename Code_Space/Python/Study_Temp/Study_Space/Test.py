@@ -1,5 +1,5 @@
 import math
 
-tempStr = "math.sin(math.radians(45))"
+tempStr = "这是一\n个字\n符\n串示\n\n例"
 
-print(eval(tempStr))
+print(tempStr.split('\n'))

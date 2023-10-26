@@ -1,7 +1,8 @@
-import re
 import time
 
 import openpyxl
+from fuzzywuzzy import fuzz
+from openpyxl.styles import Alignment
 from selenium import webdriver
 from selenium.common import NoSuchElementException
 from selenium.webdriver.chrome.options import Options
@@ -47,6 +48,7 @@ driver.get(url)
 '''
 # 建立存储数据结构模板
 list_info_template = {
+    '专业代码': '',
     '专业名称': '',
     '说明': '',
     '再选科目': ' ',
@@ -97,10 +99,16 @@ def clear_school_info():
 def insert_school_type(type_str: str):
     global school_type
 
-    temp_school_type = type_str.split('\n')[2]
+    # print(type_str.split(' '))
+
+    temp_school_type = type_str.split(' ')[2]
 
     if temp_school_type not in school_type:
-        school_type = school_type + '\n[' + temp_school_type + ']'
+        school_type = school_type + '[' + temp_school_type + ']\n'
+
+
+def display_type():
+    print(f'办学主体:{school_type}')
 
 
 # 清除办学主体
@@ -109,49 +117,155 @@ def clear_school_type():
     school_type = ''
 
 
+# 找出专业名称中的说明
+def find_tips(tip_str: str):
+    track_back = tip_str.find('（')
+
+    if track_back != -1:
+        return tip_str[track_back:]
+    else:
+        print('无说明提取')
+        return ''
+
+
+# 专业名称模糊匹配
+def fuzz_patten(patten_str: str):
+
+    # 主动干预匹配精度
+    if '（语种：不限）' in patten_str:
+        patten_str.replace('（语种：不限）', '')
+
+    # 创建字典,保存专业名称与匹配度
+    name_matches = {}
+
+    # 在每个专业中进行专业名称的模糊匹配
+    for match_list in list_info_all:
+        # 获取专业名称匹配度
+        match_ratio = fuzz.ratio(patten_str, match_list['专业名称'])
+        # 填入字典['专业名称':'匹配度']
+        name_matches[match_list['专业名称']] = str(match_ratio)
+
+    # Debug
+    # print(f'匹配专业:{patten_str}')
+    # print(name_matches)
+
+    # 返回专业名称匹配度最大的专业名称
+    return str(max(name_matches, key=name_matches.get))
+
+
 # 部署整合大学专业分数线,招生计划的方法
 def kit_for_info(plan, strs: str, kit_year):
     # 加入全局变量数据结构
     global list_info_all
 
+    # Debug 专业入参
+    # print(f'plan:{plan}\nstrs:{strs}\nkit_year:{kit_year}')
+
     # 将入参的字符串分割
     into_strs = strs.split('\n')
 
     # 如果是专业分数线入参，那么应该有5个元素
-    if plan == 'plan1':
+    if plan == 'part1':
         # 为专业分数线创建新专业子数据结构
         new_temp_list = list_info_template.copy()
 
         # 为最积分/最低位次进行拆分
         low_score_rank = into_strs[3].split('/')
 
-        # 查询现有数据结构是否包含该专业
-        for plan1_struct in list_info_all:
-            # 如果有,则就近添加数据
-            if plan1_struct['专业名称'] == into_strs[0]:
-                plan1_struct[f'{kit_year}分数'] = low_score_rank[0]
-                plan1_struct[f'{kit_year}位次'] = low_score_rank[1]
-            else:
-                # 如果没有,则进行专业数据结构创建
-                # 对专业分数线进行数据整合
-                new_temp_list['专业名称'] = into_strs[0]
-                new_temp_list['说明'] = re.findall(r'\((.*?)\)', into_strs[0])[0]
-                new_temp_list[f'{kit_year}分数'] = low_score_rank[0]
-                new_temp_list[f'{kit_year}位次'] = low_score_rank[1]
-                # 加入主数据结构
-                list_info_all.append(new_temp_list)
+        # 对列表进行查找如果没有之前创建的专业数据结构则直接进行入参
+        check_position = -1
+        for check_part_list in list_info_all:
+            if check_part_list['专业名称'] == into_strs[0]:
+                check_position = list_info_all.index(check_part_list)
+                break
+
+        if check_position == -1:
+            new_temp_list['专业代码'] = str(len(list_info_all) + 1)
+            new_temp_list['专业名称'] = into_strs[0]
+
+            # 匹配模式进行括号内容查找
+            track_index = into_strs[0].find('（')
+
+            new_temp_list['说明'] = find_tips(into_strs[0])
+
+            new_temp_list[f'{kit_year}分数'] = low_score_rank[0]
+            new_temp_list[f'{kit_year}位次'] = low_score_rank[1]
+
+            # 加入主数据结构
+            list_info_all.append(new_temp_list)
+            print('新增一个专业!')
+        else:
+            list_info_all[check_position][f'{kit_year}分数'] = low_score_rank[0]
+            list_info_all[check_position][f'{kit_year}位次'] = low_score_rank[1]
+
+        # Debug
+        # print(new_temp_list)
 
     # 如果是招生计划,就从现有数据结构中进行查询
-    if plan == 'plan2':
+    if plan == 'part2':
+
+        # 声明模糊匹配标记
+        find_name = False
 
         # 遍历查询寻找
         for plan2_struct in list_info_all:
             # 找到相同的专业名称或者具有专业名称包含的数据结构
-            if plan2_struct['专业名称'] == into_strs[0] or into_strs[0].find(plan2_struct['专业名称']):
+            if plan2_struct['专业名称'] == into_strs[0]:
+                # 不用进行模糊匹配
+                find_name = True
                 # 进行数据插入
                 plan2_struct[f'{kit_year}计划'] = into_strs[1]
-                plan2_struct['学制'] = into_strs[2]
-                plan2_struct['学费'] = into_strs[3]
+
+                # 匹配模式进行括号内容查找
+                plan2_struct['说明'] = find_tips(into_strs[0])
+
+                if plan2_struct['学制'] == '' or plan2_struct['学费'] == '':
+                    plan2_struct['学制'] = into_strs[2]
+                    plan2_struct['学费'] = into_strs[3]
+                break
+
+        # 进行专业名称的模糊匹配
+        if not find_name:
+            # 模糊匹配获取专业函数名称
+            max_ratio_name = fuzz_patten(into_strs[0])
+
+            # 再进行插入
+            for part_list in list_info_all:
+
+                if part_list['专业名称'] == max_ratio_name:
+
+                    part_list[f'{kit_year}计划'] = into_strs[1]
+                    part_list['说明'] = find_tips(into_strs[0])
+
+                    if part_list['学制'] == '' or part_list['学费'] == '':
+                        part_list['学制'] = into_strs[2]
+                        part_list['学费'] = into_strs[3]
+                    break
+
+            # 被优化,改为模糊匹配
+            # elif plan2_struct['专业名称'] in into_strs[0]:
+            #     # 进行数据插入
+            #     plan2_struct[f'{kit_year}计划'] = into_strs[1]
+            #
+            #     # 匹配模式进行括号内容查找
+            #     plan2_struct['说明'] = find_tips(into_strs[0])
+            #
+            #     if kit_year == '23':
+            #         plan2_struct['学制'] = into_strs[2]
+            #         plan2_struct['学费'] = into_strs[3]
+            #     break
+
+
+# 展示大学的所有数据
+def display_all_info():
+    print('\n信息收集整合完毕')
+    print(f'大学名称: {school_name}')
+    print(f'大学代号: {school_mark}')
+    print(f'大学办学主体: {school_type}')
+    print(f'全部专业: ')
+
+    for tmp_print in list_info_all:
+        print(tmp_print)
 
 
 # 部署清除主数据结构
@@ -210,19 +324,19 @@ excel_sheet = excel_inti["Sheet1"]
 def list_insert():
     # 获取总数据结构
     global list_info_all
-    max_row = excel_sheet.max_row
+    start_row = int(excel_sheet.max_row) + 1
     # 设置起始列
-    start_column = 6
+    start_column = 5
 
     # 主数据结构中循环,提取每一个专业数据结构
-    for part_list in list_info_all:
+    for j, part_list in enumerate(list_info_all):
         # 将专业数据结构的Value值提取出来做一个数组
         part_list_value = list(part_list.values())
 
         # 该值数组迭代
-        for value, i in enumerate(part_list_value):
+        for i, value in enumerate(part_list_value):
             # 从开始行迭代插入数据,列从第6列开始迭代
-            excel_sheet.cell(row=max_row + 1, cloumn=start_column + i, value=value)
+            excel_sheet.cell(row=start_row + int(j), column=start_column + int(i), value=value)
 
 
 # 回溯进行上下单元格合并并且进行学院数据插入
@@ -230,20 +344,38 @@ def main_info_insert():
     # 获取专业数与最大记录行
     max_row = excel_sheet.max_row
     struct_num = len(list_info_all)
+
+    # 设置格式
+    # 创建一个 Alignment 对象，设置垂直居中和水平居中
+    alignment = Alignment(vertical='center', horizontal='center')
+
+    # 遍历 B、C、D 列的所有单元格，设置垂直居中和水平居中
+    for row in excel_sheet.iter_rows(min_row=2, max_row=excel_sheet.max_row, min_col=2, max_col=4):
+        for cell in row:
+            cell.alignment = alignment
+
+    # 设置列 B、C、D 的宽度
+    excel_sheet.column_dimensions['B'].width = 10  # 设置列 B 的宽度为 10
+    excel_sheet.column_dimensions['C'].width = 22  # 设置列 C 的宽度为 22
+    excel_sheet.column_dimensions['D'].width = 22  # 设置列 D 的宽度为 22
+    excel_sheet.column_dimensions['F'].width = 22  # 设置列 F 的宽度为 22
+    excel_sheet.column_dimensions['G'].width = 22  # 设置列 G 的宽度为 22
+
     # 插入主要数据
-    excel_sheet.cell(row=max_row + 1, column=2, value=school_mark)
-    excel_sheet.cell(row=max_row + 1, column=3, value=school_name)
-    excel_sheet.cell(row=max_row + 1, column=4, value=school_type)
+    excel_sheet.cell(row=max_row - (struct_num - 1), column=2, value=school_mark)
+    excel_sheet.cell(row=max_row - (struct_num - 1), column=3, value=school_name)
+    excel_sheet.cell(row=max_row - (struct_num - 1), column=4, value=school_type)
 
     # 开始向下合并单元格
-    excel_sheet.merge_cells(f"B{max_row + 1}:B{max_row + struct_num}")
-    excel_sheet.merge_cells(f"C{max_row + 1}:C{max_row + struct_num}")
-    excel_sheet.merge_cells(f"D{max_row + 1}:D{max_row + struct_num}")
+    excel_sheet.merge_cells(f"A{max_row - (struct_num - 1)}:A{max_row}")
+    excel_sheet.merge_cells(f"B{max_row - (struct_num - 1)}:B{max_row}")
+    excel_sheet.merge_cells(f"C{max_row - (struct_num - 1)}:C{max_row}")
+    excel_sheet.merge_cells(f"D{max_row - (struct_num - 1)}:D{max_row}")
 
 
 # 保存文件结构,在最后进行
 def save_excel():
-    excel_inti.save("C://Users/小吴同志的R7000P/Desktop/WorkResult.xlsx")
+    excel_inti.save("C://Users/小吴同志的R7000P/Desktop/WorkSpace.xlsx")
 
 
 # 结构整合,进行总接口建立,上传完毕后自动清空数据结构
@@ -251,6 +383,7 @@ def save_bus_and_clear():
     list_insert()
     main_info_insert()
     clear_all_info()
+    save_excel()
 
 
 # 数据保存区↑↑↑
@@ -310,7 +443,7 @@ def get_com_num(path, wait_time):
 
 
 # TAG的Table提取方法,不具备翻页能力以及多项选择能力
-def get_table_info(path, counter, info_current_year):
+def get_table_info(path, counter):
     # 时延
     time.sleep(1)
 
@@ -320,27 +453,22 @@ def get_table_info(path, counter, info_current_year):
 
     for tr_element in tmp_elements:
 
-        if tmp_elements.index(tr_element) == 0:
-            th_elements = tr_element.find_elements(By.TAG_NAME, 'th')
-
-            th_info = [th.text for th in th_elements]
-
-            for tmp_info in th_info:
-                print(tmp_info)
-
-        else:
+        if tmp_elements.index(tr_element) != 0:
             td_elements = tr_element.find_elements(By.TAG_NAME, 'td')
 
             combined_str = " ".join([td.text for td in td_elements])
 
             if "本科二批" in combined_str:
                 counter += 1
+                # print(combined_str)
 
-                for tmp_info in td_elements:
-                    # AOP数据导入,导入三年来的办学主体
-                    print(tmp_info.text)
+                # AOP数据导入,导入三年来的办学主体
+                insert_school_type(combined_str)
+                # display_type()
+
             else:
-                print('非本科二批信息\n')
+                print('非本科二批信息,不插入\n')
+
     return counter
 
 
@@ -406,20 +534,15 @@ def get_table_plan(path, plan_current_year, kind):
 
         for tr_element in tmp_elements:
 
-            if tmp_elements.index(tr_element) == 0:
-                th_elements = tr_element.find_elements(By.TAG_NAME, 'th')
-
-                th_info = [th.text for th in th_elements]
-
-                for tmp_info in th_info:
-                    print(tmp_info)
-
-            else:
+            if tmp_elements.index(tr_element) != 0:
                 td_elements = tr_element.find_elements(By.TAG_NAME, 'td')
                 td_info = [td.text for td in td_elements]
+                consist_info = '\n'.join(td_info)
 
-                for tmp_info in td_info:
-                    print(tmp_info)
+                # Debug:get_table_plan()
+                # print(consist_info)
+                # AOP数据导入,导入专业分数线或招生计划信息
+                kit_for_info(kind, consist_info, plan_current_year)
 
         # 点击Table翻页
         if change_page_num != 1:
@@ -502,14 +625,14 @@ for j in range(university_list_range):
 
         # Debug
         # 对第二部分[专业分数线]的单元测试,测试目标:爬取精度
-        # 测试URL: https://www.gaokao.cn/school/521
+        # 测试URL: https://www.gaokao.cn/school/[大学代号]
         # 测试结果:测试修改成功,解决Table为一页时任然翻页问题
         # 测试代码如下:
-        # driver.execute_script('window.location.href="https://www.gaokao.cn/school/3202";')
+        # driver.execute_script('window.location.href="https://www.gaokao.cn/school/521";')
 
         # 进入provinceline
         driver.execute_script(f'window.location.href="{driver.current_url}/provinceline";')
-        time.sleep(1)
+        time.sleep(2)
         # click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
         #              '/div[1]/div[1]/div[2]/div[1]/div[2]/div[1]/div[5]/div[2]', 4)
 
@@ -526,6 +649,8 @@ for j in range(university_list_range):
                                                  '/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]'
                                                  '/div[1]/div[1]/div[1]', 0))
         except ValueError:
+            clear_all_info()
+            quit_web_page()
             print('无录取情况!跳回')
             continue
 
@@ -544,10 +669,18 @@ for j in range(university_list_range):
         STU_start_year = 0
 
         try:
-            int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
-                                '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]/div[1]'
-                                '/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]'
-                                '/div[1]/div[1]/div[1]/div[1]', 0))
+
+            # driver.execute_script(f"window.scrollBy(0,1000);")
+
+            # time.sleep(3)
+
+            STU_start_year = int(get_text_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                                 '/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[4]/div[1]'
+                                                 '/div[1]/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[1]'
+                                                 '/div[1]/div[1]/div[1]', 2))
+
+            # driver.execute_script(f"window.scrollBy(0,-1000);")
+
         except ValueError:
             print('无招生情况查找年份!')
 
@@ -593,7 +726,7 @@ for j in range(university_list_range):
             # 进行二本信息查找
             TAG_counter += get_table_info('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
                                           '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]/table[1]',
-                                          TAG_counter, TAG_current_year[2:])
+                                          TAG_counter)
 
             print('当前年份文科信息收集完毕,切换年份,Table或退出本页面')
             change_inner_year(TAG_year_vis,
@@ -641,9 +774,10 @@ for j in range(university_list_range):
                     else:
                         print('当前年份无文科信息,切换年份或退出本页面')
                         change_inner_year(PLAN_year_vis,
-                                          '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
-                                          '/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/form[1]/div[1]/div[1]'
-                                          '/div[1]/span[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[' + str(i) + ']')
+                                          '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                          '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]'
+                                          '/div[2]/form[1]/div[1]/div[1]/div[1]/span[1]/div[2]/div[1]/div[1]'
+                                          '/div[1]/ul[1]/li[' + str(i) + ']')
                         continue
 
                     if get_text_method(
@@ -679,7 +813,7 @@ for j in range(university_list_range):
                 # driver.execute_script(f"window.scrollBy(0,200);")
                 get_table_plan('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
                                '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/table[1]',
-                               PLAN1_current_year, 'part1')
+                               PLAN1_current_year[2:], 'part1')
 
                 driver.execute_script(f"window.scrollBy(0,-250);")
                 print('当前年份文科信息收集完毕,切换年份或退出本页面')
@@ -760,7 +894,7 @@ for j in range(university_list_range):
                 # 进行二本信息查找
                 # driver.execute_script(f"window.scrollBy(0,70);")
                 get_table_plan('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
-                               '/div[3]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/table[1]', PLAN2_current_year[2],
+                               '/div[3]/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/table[1]', PLAN2_current_year[2:],
                                'part2')
 
                 print('当前年份文科信息收集完毕,切换年份或退出本页面')
@@ -774,9 +908,16 @@ for j in range(university_list_range):
         else:
             print('招生计划无年份,不进行查询')
 
+        display_all_info()
+        save_bus_and_clear()
+        # Debug
+        # clear_all_info()
+        # Debug
+        # save_excel()
         quit_web_page()
 
     # 加入翻页功能进入外循环
     change_main_page()
 
+save_excel()
 driver.quit()

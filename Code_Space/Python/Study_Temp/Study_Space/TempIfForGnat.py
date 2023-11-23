@@ -15,7 +15,7 @@ wait_second2 = 5
 # 设置最远爬取年份
 end_year = 2021
 
-url = 'https://www.gaokao.cn/school/search'
+url = 'https://www.gaokao.cn/lineschool'
 # response = requests.get(url)
 
 chrome_options = Options()
@@ -130,10 +130,12 @@ def find_tips(tip_str: str):
 
 # 专业名称模糊匹配
 def fuzz_patten(patten_str: str):
-
     # 主动干预匹配精度
     if '（语种：不限）' in patten_str:
         patten_str.replace('（语种：不限）', '')
+
+    patten_str.replace('（', '')
+    patten_str.replace('）', '')
 
     # 创建字典,保存专业名称与匹配度
     name_matches = {}
@@ -149,8 +151,9 @@ def fuzz_patten(patten_str: str):
     # print(f'匹配专业:{patten_str}')
     # print(name_matches)
 
-    # 返回专业名称匹配度最大的专业名称
-    return str(max(name_matches, key=name_matches.get))
+    if len(name_matches) != 0:
+        # 返回专业名称匹配度最大的专业名称
+        return str(max(name_matches, key=name_matches.get))
 
 
 # 部署整合大学专业分数线,招生计划的方法
@@ -367,10 +370,10 @@ def main_info_insert():
     excel_sheet.cell(row=max_row - (struct_num - 1), column=4, value=school_type)
 
     # 开始向下合并单元格
-    excel_sheet.merge_cells(f"A{max_row - (struct_num - 1)}:A{max_row}")
-    excel_sheet.merge_cells(f"B{max_row - (struct_num - 1)}:B{max_row}")
-    excel_sheet.merge_cells(f"C{max_row - (struct_num - 1)}:C{max_row}")
-    excel_sheet.merge_cells(f"D{max_row - (struct_num - 1)}:D{max_row}")
+    # excel_sheet.merge_cells(f"A{max_row - (struct_num - 1)}:A{max_row}")
+    # excel_sheet.merge_cells(f"B{max_row - (struct_num - 1)}:B{max_row}")
+    # excel_sheet.merge_cells(f"C{max_row - (struct_num - 1)}:C{max_row}")
+    # excel_sheet.merge_cells(f"D{max_row - (struct_num - 1)}:D{max_row}")
 
 
 # 保存文件结构,在最后进行
@@ -408,14 +411,8 @@ STU_year_vis = '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1
 # 大学列表提取方法
 def link_university():
     time.sleep(1)
-    university_lists = driver.find_element(By.ID, 'root').find_element(By.CLASS_NAME, 'container') \
-        .find_element(By.CLASS_NAME, 'container').find_element(By.CLASS_NAME, 'container') \
-        .find_element(By.CLASS_NAME, 'container').find_element(By.CLASS_NAME, 'clearfix') \
-        .find_element(By.CLASS_NAME, 'main').find_element(By.TAG_NAME, 'div') \
-        .find_element(By.CLASS_NAME, 'content-left_box__3SjwR') \
-        .find_element(By.CLASS_NAME, 'school-search_schoolListMain__B9yLk') \
-        .find_element(By.CLASS_NAME, 'school-search_listBox__at-rI') \
-        .find_elements(By.CLASS_NAME, 'school-search_schoolItem__3q7R2')
+    university_lists = driver.find_elements(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/'
+                                                      'div[2]/div[2]/div[1]/div[1]/div[1]/div[4]/div[1]/div')
     return university_lists
 
 
@@ -579,8 +576,13 @@ def quit_web_page():
 
 # 下一页大学列表
 def change_main_page():
-    driver.find_element(By.XPATH, '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]'
-                                  '/div[2]/div[1]/div[1]/div[1]/div[3]/div[2]/div[1]/ul[1]/li[9]').click()
+    list_end = get_com_num('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]'
+                           '/div[1]/div[1]/div[1]/div[4]/div[2]/div[1]/ul[1]/li', 2)
+
+    print('底端序号' + str(list_end) + '\n')
+
+    click_method(f'/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]'
+                 f'/div[1]/div[1]/div[4]/div[2]/div[1]/ul[1]/li[{list_end}]', 1)
 
 
 # 提取方法区↑↑↑
@@ -589,7 +591,25 @@ def change_main_page():
 # Relate/Tips
 # 外循环(对列表展示界面进行遍历)->内循环(对列表展示界面中的各列表项进行遍历)
 # 外循环,首先获取列表界面数量
-university_list_range = 145
+university_list_range = 39
+
+click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]'
+             '/div[1]/div[1]/div[2]/div[1]/div[1]/div[3]/div[5]/label[2]/span[1]', 1)
+
+click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]'
+             '/div[1]/div[1]/div[1]/div[2]/div[1]/div[2]/button[1]', 0.5)
+
+click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/div[1]'
+             '/div[1]/div[1]/div[3]/div[2]/div[3]/div[1]/div[1]', 0.5)
+
+click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[2]/'
+             'div[1]/div[1]/div[1]/div[3]/div[2]/div[3]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[3]', 0.5)
+
+target_page = 7
+target_uni = 1
+
+for i in range(1, target_page):
+    change_main_page()
 
 for j in range(university_list_range):
 
@@ -600,16 +620,16 @@ for j in range(university_list_range):
     # Debug
     print('大学界面列表提取完毕\n')
 
-    for i, university in enumerate(university_list, start=1):
+    for i, university in enumerate(university_list[(target_uni-1):], start=target_uni):
         time.sleep(1)
 
-        un_btn = university.find_element(By.CLASS_NAME, 'school-search_schoolInfo__2sLfR')
+        un_btn = university.find_element(By.CLASS_NAME, 'line-school_schoolInfo__1sdvn')
         print('\n序号 ' + str(i))
         un_text = un_btn.text
         # driver.execute_script("arguments[0].click();", un_btn)
 
         # 点进学校之前进行二本院校筛选
-        filter_strings = ["985", "211", "双一流", "专科"]
+        filter_strings = ["985", "211", "专科"]
         if any(substr in un_text for substr in filter_strings):
             print('略过学校:' + un_text)
             continue
@@ -628,7 +648,7 @@ for j in range(university_list_range):
         # 测试URL: https://www.gaokao.cn/school/[大学代号]
         # 测试结果:测试修改成功,解决Table为一页时任然翻页问题
         # 测试代码如下:
-        # driver.execute_script('window.location.href="https://www.gaokao.cn/school/521";')
+        # driver.execute_script('window.location.href="https://www.gaokao.cn/school/324";')
 
         # 进入provinceline
         driver.execute_script(f'window.location.href="{driver.current_url}/provinceline";')
@@ -765,14 +785,14 @@ for j in range(university_list_range):
                                  '/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[1]', 1)
 
                     if get_com_num('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
-                                   '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
-                                   '/div[3]/div[2]/div[1]/div[1]/div[1]/ul[1]/li', 0) == 2:
-                        click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[2]/div[1]'
-                                     '/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[3]/div[2]'
-                                     '/div[1]/div[1]/div[1]/ul[1]/li[2]', 0.5)
+                                   '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]'
+                                   '/div[1]/div[1]/div[3]/div[2]/div[1]/div[1]/div[1]/ul[1]/li', 0) == 2:
+                        click_method('/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
+                                     '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]'
+                                     '/div[3]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[2]', 0.5)
 
                     else:
-                        print('当前年份无文科信息,切换年份或退出本页面')
+                        print('选择文科,当前年份无文科信息,切换年份或退出本页面')
                         change_inner_year(PLAN_year_vis,
                                           '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
                                           '/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]/div[1]/div[1]'
@@ -801,7 +821,7 @@ for j in range(university_list_range):
                                 '/div[1]/span[1]/div[2]/div[1]/div[1]/div[1]/ul[1]/li[2]', 1)
 
                         else:
-                            print('当前年份无文科信息,切换年份或退出本页面')
+                            print('选择本科批次,当前年份无文科信息,切换年份或退出本页面')
                             change_inner_year(PLAN_year_vis,
                                               '/html[1]/body[1]/div[1]/div[1]/div[1]/div[1]/div[1]'
                                               '/div[1]/div[1]/div[2]/div[1]/div[3]/div[1]/div[1]/div[1]/div[3]'

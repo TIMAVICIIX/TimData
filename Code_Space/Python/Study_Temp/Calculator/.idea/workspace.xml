@@ -5,14 +5,23 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8a0c3735-42c1-4c12-a367-d5955e492f59" name="更改" comment="Update New File in Study">
-      <change afterPath="$PROJECT_DIR$/../Study_Space/No5GUI.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/.idea/uiDesigner.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/MethodMapping.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/MethodMappingFilter.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/QADUs.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/Student.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/FakeFix.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/Research3.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/Research4.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/Research5.py" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/../Study_Space/TempFix.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/DBUtil.kt" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/DBUtil.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/Student.java" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/kotlin/com/forjakarta/javaee_for_jakarta/Student_java.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/BeanTest.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/BeanTest.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/createDB.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/../../../JavaEE(Jakarta)/Study_Temp/JavaEE_For_Jakarta/src/main/webapp/createDB.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Study_Space/ForthGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/No4GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Study_Space/PythonGUI_Test2023.8.18.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/No1GUI.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Study_Space/SecondGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/No2GUI.py" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/../Study_Space/TempIfForGnat.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/TempIfForGnat.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../Study_Space/ThirdGUI.py" beforeDir="false" afterPath="$PROJECT_DIR$/../Study_Space/No3GUI.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -29,6 +38,9 @@
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
+  <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../Study_Space/Research4.py" root0="FORCE_HIGHLIGHTING" />
+  </component>
   <component name="ProblemsViewState">
     <option name="selectedTabId" value="CurrentFile" />
   </component>
@@ -42,6 +54,7 @@
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;git-widget-placeholder&quot;: &quot;master&quot;,
     &quot;last_opened_file_path&quot;: &quot;D:/Git_Space/Code_Space/Python/Study_Temp/Study_Space&quot;,
@@ -96,6 +109,27 @@
       <option name="INPUT_FILE" value="" />
       <method v="2" />
     </configuration>
+    <configuration name="Research3" type="PythonConfigurationType" factoryName="Python" temporary="true" nameIsGenerated="true">
+      <module name="pythonProject" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="PYTHONUNBUFFERED" value="1" />
+      </envs>
+      <option name="SDK_HOME" value="" />
+      <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$/../Study_Space" />
+      <option name="IS_MODULE_SDK" value="true" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <option name="SCRIPT_NAME" value="$PROJECT_DIR$/../Study_Space/Research3.py" />
+      <option name="PARAMETERS" value="" />
+      <option name="SHOW_COMMAND_LINE" value="false" />
+      <option name="EMULATE_TERMINAL" value="false" />
+      <option name="MODULE_MODE" value="false" />
+      <option name="REDIRECT_INPUT" value="false" />
+      <option name="INPUT_FILE" value="" />
+      <method v="2" />
+    </configuration>
     <configuration name="main" type="PythonConfigurationType" factoryName="Python" nameIsGenerated="true">
       <module name="pythonProject" />
       <option name="INTERPRETER_OPTIONS" value="" />
@@ -119,6 +153,7 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="Python.Research3" />
         <item itemvalue="Python.Elevator" />
         <item itemvalue="Python.Calculator" />
       </list>
@@ -199,8 +234,8 @@
       <breakpoints>
         <line-breakpoint enabled="true" suspend="THREAD" type="python-line">
           <url>file://$PROJECT_DIR$/../Study_Space/TempIfForGnat.py</url>
-          <line>916</line>
-          <option name="timeStamp" value="5" />
+          <line>778</line>
+          <option name="timeStamp" value="12" />
         </line-breakpoint>
       </breakpoints>
       <default-breakpoints>

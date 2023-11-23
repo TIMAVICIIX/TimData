@@ -12,7 +12,7 @@
 </head>
 <body>
 
-    <jsp:useBean id="student" class="com.forjakarta.javaee_for_jakarta.Student">
+    <jsp:useBean id="student" class="com.forjakarta.javaee_for_jakarta.Student_java">
         <jsp:setProperty name="student" property="no" value="2106504987"/>
         <jsp:setProperty name="student" property="name" value="艾诺"/>
         <jsp:setProperty name="student" property="address" value="诸王峡谷"/>

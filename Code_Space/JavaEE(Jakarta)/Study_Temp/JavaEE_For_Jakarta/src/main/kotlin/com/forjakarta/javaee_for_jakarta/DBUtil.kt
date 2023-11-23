@@ -14,9 +14,9 @@ object DBUtil {
 
     @Throws(SQLException::class)
     fun createBD(): Boolean {
-        val sql = "create database NewData"
+        val sql = "insert into st.user(id,name,age,address) values(3,'王五',23,'小康村')"
         try {
-            DriverManager.getConnection("jdbc:mysql://localhost:3306/", "root", "123").use { conn ->
+            DriverManager.getConnection("jdbc:mysql://localhost:3306/st", "root", "123").use { conn ->
                 conn.createStatement().use { statement ->
                     statement.execute(sql)
                     return true

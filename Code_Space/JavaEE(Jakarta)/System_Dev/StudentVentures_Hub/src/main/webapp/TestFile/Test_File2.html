@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>不改变元素大小的缩放</title>
+  <style>
+    /* 使用百分比单位设置元素大小 */
+    .container {
+      width: 50%; /* 相对于视口宽度的50% */
+      margin: 0 auto; /* 水平居中 */
+      background-color: #f0f0f0;
+      padding: 20px;
+      box-sizing: border-box;
+    }
+
+    .box {
+      width: 50%; /* 相对于容器宽度的50% */
+      height: 100px;
+      background-color: #3498db;
+      margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+<!-- 容器 -->
+<div class="container">
+  <!-- 相对于容器的大小 -->
+  <div class="box"></div>
+  <div class="box"></div>
+</div>
+
+</body>
+</html>

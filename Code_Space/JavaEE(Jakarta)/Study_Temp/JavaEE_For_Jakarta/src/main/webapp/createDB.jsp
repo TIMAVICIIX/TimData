@@ -10,7 +10,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
-    <title>创建数据库</title>
+    <title>Insert Data</title>
 </head>
 <body>
 
@@ -25,7 +25,7 @@
 
     %>
 
-    <h1>数据库创建:<%=isCreated%></h1>
+    <h1>Insert Result:<%=isCreated%></h1>
 
 </body>
 </html>

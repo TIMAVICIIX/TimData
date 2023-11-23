@@ -1,0 +1,420 @@
+/*Global Area*/
+body {
+    background-image: url(../resources/background.png);
+    background-repeat: repeat;
+    overflow: hidden;
+
+    font-family: 黑体, Arial, sans-serif;
+}
+
+/*Animation*/
+#Background_Animation_Container {
+    position: fixed;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    pointer-events: none;
+    background-color: transparent;
+}
+
+.airplane {
+    position: absolute;
+    transition: transform 5s ease-in-out, opacity 7s ease-in-out;
+}
+
+
+/*Top Area*/
+.navbar .btn:hover {
+    text-decoration: underline;
+}
+
+.top-border {
+    background-color: hsla(0, 0%, 100%, 0);
+}
+
+#JoinUs {
+    padding: 7px 12px 7px 23px;
+    font-family: 黑体, Arial, sans-serif;
+    font-size: 30px;
+    color: #FFFFFF;
+    background-color: #3FA1B7;
+    border-radius: 10px;
+    border: none;
+    outline: none;
+    transition: background-color 0.3s ease;
+    margin: auto 30px 40px 20px;
+}
+
+#JoinUs:hover {
+    background-color: #2d7181;
+}
+
+#JoinUs:active {
+    background-color: #1e4854;
+}
+
+.Navbar_Choosers {
+    font-size: 30px;
+
+    color: #5F5F5F;
+
+    margin-right: 50px;
+    margin-left: 50px;
+    border: none;
+    border-radius: 10px;
+
+    outline: none;
+
+    text-decoration: none;
+
+    background-color: transparent;
+
+    position: relative;
+}
+
+.Navbar_Choosers::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 2px;
+    background-color: #a1896d;
+    margin-bottom: 0;
+    transform: scaleX(0);
+    transform-origin: bottom center;
+    transition: transform 0.3s ease;
+}
+
+.Navbar_Choosers:hover::after {
+    transform: scaleX(1);
+}
+
+.Navbar_Choosers:active {
+    color: #2f2f2f;
+}
+
+.Navbar_Choose_Sign {
+    width: 30px;
+    height: 30px;
+}
+
+/*Content Area*/
+@keyframes IndexFloat {
+
+    from {
+        transform: translateY(100%);
+        opacity: 0;
+    }
+    to{
+        transform: translateY(0);
+        opacity: 1;
+    }
+
+}
+
+#Index_Container {
+    width: 100%;
+    height: 560px;
+
+    display: flex;
+}
+
+#Index_Login {
+    width: 100%;
+    height: 100%;
+
+    display: flex;
+
+    animation: IndexFloat 1s ease-in-out forwards;
+}
+
+#Left_page, #Right_page {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+}
+
+#Index_Query {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    animation: IndexFloat 1s ease-in-out forwards;
+}
+
+#Index_Attend {
+    width: 100%;
+    height: 100%;
+
+    display: none;
+
+    animation: IndexFloat 1s ease-in-out forwards;
+}
+
+/*Content Area.Left_Banner*/
+#Left_Banner {
+    flex: 6;
+}
+
+#BannerContainer {
+    margin-left: 70px;
+    margin-top: 90px;
+
+    width: 510px;
+    height: 270px;
+
+    border: none;
+    border-radius: 35px;
+    background-color: transparent;
+
+    box-shadow: 0 6px 3px rgba(180, 179, 179, 0.34);
+
+    overflow: hidden;
+    position: relative;
+}
+
+#NextBanner {
+    width: 20px;
+    height: 35px;
+
+    position: absolute;
+    top: 45%;
+    left: 95%;
+
+    background-color: transparent;
+    background-image: url("../resources/index/NextOrPerv.png");
+    background-size: cover;
+
+    border: none;
+}
+
+#PervBanner {
+    width: 20px;
+    height: 35px;
+
+    position: absolute;
+    top: 45%;
+    left: 5px;
+
+    background-color: transparent;
+    background-image: url("../resources/index/NextOrPerv.png");
+    background-size: cover;
+
+    transform: scaleX(-1);
+
+    border: none;
+}
+
+#Banner {
+    height: 100%;
+    width: 100%;
+
+    display: flex;
+    transition: transform 0.5s ease-in-out;
+}
+
+.Banner_Content {
+    min-width: 100%;
+    box-sizing: border-box;
+    overflow: hidden;
+
+    border: none;
+    border-radius: 35px;
+
+    background-size: cover;
+
+    position: relative;
+}
+
+.Banner_Content p {
+    position: absolute;
+
+    margin: 0;
+    bottom: 6px;
+    left: 18px;
+
+    font-size: 18px;
+    color: #FFFFFF;
+}
+
+/*Content Area.Inquire&Help*/
+#Inquire\&Help {
+    flex: 4;
+}
+
+#Inquire\&Help_title {
+    margin-top: 15px;
+
+    width: 60%;
+    height: 30px;
+    border-bottom: #000000 solid 1px;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateX(-100%);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+#Inquire\&Help_title p {
+    margin: 0;
+
+    font-size: 20px;
+    color: #4a4a4a;
+    opacity: 0;
+    letter-spacing: 20px;
+
+    animation: slideIn 1.5s ease-in-out forwards;
+}
+
+.Inquire\&Help_content {
+    width: 80%;
+    margin-left: 8px;
+
+    background-color: transparent;
+    color: #212121;
+    font-size: 15px;
+    text-decoration: none;
+
+    border-radius: 3px;
+
+    animation: slideIn 2s ease-in-out forwards;
+    transition: background-color 0.5s ease-in-out;
+
+    display: flex;
+}
+
+.Inquire\&Help_content:hover {
+    text-decoration: none;
+
+    background-color: rgba(128, 128, 128, 0.29);
+}
+
+.Inquire\&Help_content:active {
+    background-color: rgba(58, 58, 58, 0.47);
+}
+
+.Inquire\&Help_content p {
+    margin: 0;
+}
+
+.IH_title {
+    justify-content: flex-start;
+    display: flex;
+}
+
+.IH_date {
+    flex: 1;
+    justify-content: flex-end;
+    display: flex;
+}
+
+/*Content Area.Login*/
+#Right_page {
+    position: relative;
+}
+
+#Login_Area {
+    position: absolute;
+
+    top: 40px;
+    left: 60px;
+
+    width: 420px;
+    height: 450px;
+
+    background-color: #FFFFFF;
+    border-radius: 20px;
+    border: #CACACA solid 1px;
+
+    box-shadow: 0 6px 3px rgba(180, 179, 179, 0.34);
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#Login_Title {
+    font-family: Auto_Pen, 黑体, Arial, sans-serif;
+    font-size: 25px;
+    color: #176977;
+    margin: 25px 15px 25px 15px;
+}
+
+#SecurityCheck {
+    width: 95%;
+    height: auto;
+
+    margin-top: 5px;
+}
+
+#SecurityCheck p {
+    color: #A5A5A5;
+    font-size: 15px;
+}
+
+#SecurityCheck p a {
+    color: #1D798A;
+}
+
+.Login_Input {
+    width: 95%;
+    height: 55px;
+
+    background-color: #FFFFFF;
+
+    border-radius: 5px;
+    border: #E8E8E8 solid 1px;
+
+    color: #A5A5A5;
+    font-size: 20px;
+}
+
+#LoginBtn {
+    width: 80%;
+    height: 70px;
+
+    margin-top: 30px;
+
+    border: none;
+    border-radius: 20px;
+
+    background-color: #18BCBE;
+
+    font-size: 30px;
+    color: #FFFFFF;
+}
+#LoginBtn:active{
+    background-color: #0e6465;
+}
+
+/*Footer Area*/
+footer {
+    position: fixed;
+    bottom: 0;
+
+    width: 100%;
+    height: 55px;
+
+    background-color: #D2D2D2;
+    border-top: rgba(119, 119, 119, 0.37) solid 2px;
+
+    text-align: center;
+    font-size: 12px;
+    color: #494949;
+}
+
+footer p span {
+    color: #343434;
+}

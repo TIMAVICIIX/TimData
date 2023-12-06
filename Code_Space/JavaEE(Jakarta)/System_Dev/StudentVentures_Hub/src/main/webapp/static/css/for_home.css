@@ -1,0 +1,274 @@
+body {
+    background-image: url(../resources/background.png);
+    background-repeat: repeat;
+    overflow: hidden;
+
+    font-family: 黑体, Arial, sans-serif;
+
+    color: #545454;
+
+    display: flex;
+}
+
+/*sideBar*/
+.home_side_bar{
+    width: 20%;
+    height: 95%;
+
+    margin: 20px 5px 20px 10px;
+
+    border-radius: 15px;
+    border: #A7A7A7 solid 1px;
+
+    background-color: #FFFFFF;
+
+    display: flex;
+    flex-direction: column;
+
+    position: relative;
+
+    box-shadow: 0 6px 3px rgba(180, 179, 179, 0.34);
+}
+.logo_display{
+    width: 100%;
+    height: auto;
+
+    display: flex;
+
+    padding: 10px;
+
+    font-size: 16px;
+}
+.logo_display img{
+    width: 40px;
+    height: 50px;
+}
+.logo_display p{
+    margin-left: 10px;
+}
+
+.navigation_tips{
+    width: 70%;
+    height: auto;
+
+    margin-left: 30px;
+
+    font-size: 14px;
+    color: #545454;
+
+    border-bottom: #545454 solid 1px;
+}
+.navigation_tips p{
+    margin: 3px;
+    padding: 0;
+}
+
+.icon_changes{
+    width: 100%;
+    height: auto;
+
+    margin-top: 30px;
+    margin-bottom: 35px;
+
+    font-size: 15px;
+
+    position: relative;
+}
+.icon_changes button{
+    position: absolute;
+
+    display: flex;
+    align-items: center;
+
+    border: none;
+
+    background-color: transparent;
+
+    right: 10px;
+}
+.icon_changes p{
+    padding: 0;
+    margin: 0;
+}
+
+.Icon_container{
+    width: 100%;
+    height: 150px;
+
+    display: flex;
+    justify-content: center;
+}
+.Icon{
+    width: 120px;
+    height: 120px;
+
+    border-radius: 7px;
+}
+
+.side_navigation_area{
+    width: 100%;
+    height: auto;
+}
+
+.order_space{
+    width: 100%;
+
+    color: #7a7a7a;
+}
+.first_order{
+    width: 100%;
+    height: 50px;
+
+    display: flex;
+    align-items: center;
+
+    position: relative;
+
+    border: none;
+    background-color: #FFFFFF;
+
+    font-size: 18px;
+    transition: 0.3s;
+}
+.first_order::after{
+    content: "";
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 4px;
+    height: 100%;
+    background-color: #1382A1;
+    margin-bottom: 0;
+    transform: scaleY(0);
+    transform-origin: center left;
+    transition: transform 0.3s ease;
+}
+.order_space:hover .first_order{
+    background-color: #EAEAEA;
+    border-top: #919191 solid 1px;
+    border-bottom: #919191 solid 1px;
+}
+.order_space:hover .first_order::after{
+    transform: scaleY(1);
+}
+.first_order img{
+    width: 25px;
+    height: 25px;
+
+    margin: 10px;
+}
+
+.task_tips{
+    position: absolute;
+    right: 10px;
+
+    width: 30px;
+    height: 17px;
+
+    border-radius: 4px;
+    background-color: #1382A1;
+
+    font-size: 11px;
+    color: #FFFFFF;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.second_order_space{
+    height: 0;
+    overflow: hidden;
+    transition: height 0.5s ease-in-out;
+
+    background-color: #FFFFFF;
+}
+.second_order{
+    width: 100%;
+    height: 30px;
+
+    border: none;
+    background-color: #FFFFFF;
+
+    font-size: 14px;
+
+    text-align: left;
+
+    padding-left: 40px;
+
+    transition: 0.3s;
+}
+.second_order:hover{
+    background-color: #c7c7c7;
+}
+
+.bottom_area{
+    width: 70%;
+    height: auto;
+
+    position: absolute;
+
+    bottom: 10px;
+    left: 30px;
+
+    border-top: #545454 solid 1px;
+}
+.bottom_area p{
+    font-size: 12px;
+    text-align: left;
+
+    margin: 3px;
+}
+.side_bar_footer{
+    font-size: 11px;
+    margin-top: 10px;
+}
+.bottom_href{
+    color: #0f5132;
+    text-decoration: none;
+}
+.bottom_href:hover{
+    text-decoration:underline;
+}
+.bottom_href:active{
+    color: #092d1e;
+}
+.replace_account_Btn{
+    position: absolute;
+    right: 5px;
+    bottom: 1px;
+
+    display: flex;
+    align-items: center;
+
+    font-size: 12px;
+    color: #545454;
+
+    border: none;
+
+    background-color: transparent;
+}
+.replace_account_Btn img{
+    width: 15px;
+    height: 15px;
+}
+
+/*Center*/
+.home_center{
+    width: 75%;
+    height: 95%;
+
+    margin:20px 5px 20px 10px;
+}
+
+.home_center_container{
+    width: 100%;
+    height: 650px;
+
+    border-radius: 15px;
+    border: #A7A7A7 solid 1px;
+
+    background-color: #FFFFFF;
+
+    box-shadow: 0 6px 3px rgba(180, 179, 179, 0.34);
+}

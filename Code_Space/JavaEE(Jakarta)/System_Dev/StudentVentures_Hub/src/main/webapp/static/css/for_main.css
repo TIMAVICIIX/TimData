@@ -108,7 +108,7 @@ body {
         transform: translateY(100%);
         opacity: 0;
     }
-    to{
+    to {
         transform: translateY(0);
         opacity: 1;
     }
@@ -131,14 +131,6 @@ body {
     animation: IndexFloat 1s ease-in-out forwards;
 }
 
-#Left_page, #Right_page {
-    width: 50%;
-    height: 100%;
-
-    display: flex;
-    flex-direction: column;
-}
-
 #Index_Query {
     width: 100%;
     height: 100%;
@@ -155,6 +147,14 @@ body {
     display: none;
 
     animation: IndexFloat 1s ease-in-out forwards;
+}
+
+#Left_page, #Right_page {
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
 }
 
 /*Content Area.Left_Banner*/
@@ -374,11 +374,36 @@ body {
 
     background-color: #FFFFFF;
 
+
     border-radius: 5px;
     border: #E8E8E8 solid 1px;
 
     color: #A5A5A5;
     font-size: 20px;
+}
+
+#loginForm{
+    margin-left: 11px;
+}
+
+@keyframes shake {
+    0%, 100% {
+        transform: translateX(0);
+    }
+    25%, 75% {
+        transform: translateX(-5px);
+    }
+    50% {
+        transform: translateX(5px);
+    }
+}
+.shake{
+    animation: shake 0.5s ease-in-out;
+}
+
+#login_tips{
+    visibility: hidden;
+    margin: 2px 0 0 0;
 }
 
 #LoginBtn {
@@ -395,8 +420,249 @@ body {
     font-size: 30px;
     color: #FFFFFF;
 }
-#LoginBtn:active{
+
+#LoginBtn:active {
     background-color: #0e6465;
+}
+
+/*Content Area.Check*/
+#filter_top {
+    width: 100%;
+    height: 70px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+#filter_area {
+    width: 90%;
+    height: 80%;
+
+    color: #515151;
+    font-size: 30px;
+
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter_input {
+    height: 90%;
+    width: 480px;
+
+    margin-right: 20px;
+    margin-left: 30px;
+
+    border: #A6A6A6 solid 1px;
+    border-radius: 10px;
+
+    color: #949494;
+    font-size: 20px;
+}
+
+#filter_submit {
+    width: 30px;
+    height: 30px;
+
+    border: none;
+
+    border-radius: 4px;
+
+    background-color: #56AEBE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#filter_submit:active {
+    background-color: #2b575e;
+}
+
+#filter_refresh{
+    width: 100px;
+    height: 35px;
+
+    margin-left: 90px;
+
+    border: none;
+    border-radius: 4px;
+
+    letter-spacing: 6px;
+    font-size: 25px;
+    color: #FFFFFF;
+
+    background-color: #56AEBE;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#filter_refresh:active{
+    background-color: #2b575e;
+}
+
+#time_recorder {
+    width: 36%;
+    height: 20%;
+
+    font-size: 14px;
+    color: #515151;
+
+    display: flex;
+}
+
+
+#check_container{
+    width: 100%;
+    height: 465px;
+
+    margin-top: 20px;
+
+    display: flex;
+    justify-content: center;
+
+    overflow: auto;
+}
+#check_table {
+    width: 95%;
+    height: 100%;
+
+    overflow: auto;
+
+    border: #303030 solid 1px;
+    border-radius: 10px;
+}
+.query_table{
+    width: 100%;
+    height: 100%;
+
+    overflow: auto;
+}
+.query_table th{
+    border-left: #303030 solid 1px;
+    border-right: #303030 solid 1px;
+    border-bottom: #303030 solid 1px;
+
+    font-size: 20px;
+    color: #4C4C4C;
+
+    text-align: center;
+}
+.query_table tbody tr{
+    height: 25px;
+
+    border-bottom: #B0B0B0 solid 1px;
+
+    text-align: center;
+}
+.query_table td{
+    border:none;
+}
+
+/*Content Area.Attend*/
+.attend_Page{
+    width: 50%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.attend_Page p{
+    width: 95%;
+
+    font-size: 35px;
+    color: #686868;
+    font-family: Auto_Pen, 黑体, Arial, sans-serif;
+}
+.attend_Page Button{
+    padding: 5px;
+
+    border: none;
+    border-radius: 10px;
+
+    font-size: 25px;
+
+    color: #FFFFFF;
+    box-shadow: 0 6px 3px rgba(180, 179, 179, 0.34);
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.attend_Page Button img{
+    margin: 15px;
+    width: 22px;
+    height: 22px;
+}
+
+#left_attend_Page{
+    border-right: #959595 solid 1px;
+}
+#left_attend_Page Button{
+    width: 250px;
+    height: 70px;
+
+    margin-top: 20px;
+    margin-bottom: 20px;
+
+    background-color: #34A681;
+}
+#left_attend_Page Button:active{
+    background-color: #0f5132;
+}
+#attend_student_transfer{
+    position: absolute;
+    left: 3px;
+
+    color: #7D7D7D;
+    font-size: 15px;
+
+    text-decoration: none;
+}
+#attend_student_transfer:active{
+    color: #1a1d20;
+}
+#attend_student_transfer:hover{
+    text-decoration: underline #1a1d20 solid 1px;
+}
+#attend_student_transfer img{
+    width: 15px;
+    height: 15px;
+
+    margin-left: 3px;
+}
+
+#right_attend_Page Button{
+    width: 250px;
+    height: 50px;
+
+    margin-top: 15px;
+    margin-bottom: 15px;
+
+    background-color: #4BB3D0;
+}
+#right_attend_Page Button:active{
+    background-color: #193b44;
+}
+
+#attend_college_adoptIntent{
+    position: absolute;
+    right: 3px;
+
+    color: #7D7D7D;
+    font-size: 15px;
+
+    text-decoration: none;
+}
+#attend_college_adoptIntent:hover{
+    text-decoration: underline #1a1d20 solid 1px;
+}
+#attend_college_adoptIntent:active{
+    color: #1a1d20;
 }
 
 /*Footer Area*/

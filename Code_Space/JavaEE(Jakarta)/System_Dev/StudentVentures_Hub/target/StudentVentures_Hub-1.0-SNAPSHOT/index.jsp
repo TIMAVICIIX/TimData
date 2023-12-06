@@ -83,11 +83,11 @@
                     <p><img src="static/resources/index/inquire.png" alt="inquire"
                             style="margin: 0 15px 5px 20px;width: 25px;height: 25px">帮助&公告</p>
                 </div>
-                <a class="Inquire&Help_content" href="Help&Inquire/20231117_startedannounce.html" target="_blank">
+                <a class="Inquire&Help_content" href="Page_Help&Inquire/20231117_startedannounce.html" target="_blank">
                     <p class="IH_title">关于系统的启动发布公告</p>
                     <p class="IH_date">2023-11-17</p>
                 </a>
-                <a class="Inquire&Help_content" href="Help&Inquire/20231121_help&inquire.html" target="_blank">
+                <a class="Inquire&Help_content" href="Page_Help&Inquire/20231121_help&inquire.html" target="_blank">
                     <p class="IH_title">0.5版本更新功能介绍与使用帮助</p>
                     <p class="IH_date">2023-11-21</p>
                 </a>
@@ -98,11 +98,18 @@
 
             <div id="Login_Area">
                 <p id="Login_Title">账号密码登录</p>
-                <input class="Login_Input" placeholder="请输入学籍账号" type="number">
-                <input class="Login_Input" style="margin-top: 50px" placeholder="请输入密码" type="password">
-                <div id="SecurityCheck">
-                    <p>点击登录键即同意<a href="#">用户隐私政策</a>与<a href="#">服务条款</a></p>
-                </div>
+                <form id="loginForm" action="<%=request.getContextPath()%>/index-controller" method="post">
+                    <input id="login_account" name="login_account" class="Login_Input" placeholder="请输入学籍账号"
+                           type="number">
+                    <input id="login_password" name="login_password" class="Login_Input" style="margin-top: 50px"
+                           placeholder="请输入密码"
+                           type="password">
+                    <div id="SecurityCheck">
+                        <p>点击登录键即同意<a href="#">用户隐私政策</a>与<a href="#">服务条款</a></p>
+                        <p id="login_tips" style="color:#ff0000;">密码错误!</p>
+                    </div>
+                    <input name="action" value="login" style="display: none">
+                </form>
                 <button id="LoginBtn">
                     登&nbsp;录
                 </button>
@@ -114,13 +121,89 @@
 
     <div id="Index_Query">
 
-        <h5>查询界面</h5>
+        <div id="filter_top">
+            <div id="filter_area">
+                筛选条件:
+                <input id="filter_input" type="text" placeholder="假期名称/日期/学院/年份">
+                <button id="filter_submit">
+                    <img src="static/resources/index/filterChose.png" style="width: 25px;height: 25px" alt="submit">
+                </button>
+                <button id="filter_refresh">
+                    刷新
+                    <img src="static/resources/index/refresh.png" style="width: 15px; height: 15px" alt="refresh">
+                </button>
+            </div>
+            <div id="time_recorder">
+                上次刷新时间:<p id="refresh_time"></p>
+            </div>
+        </div>
+        <div id="check_container">
+            <div id="check_table">
 
+                <table class="query_table">
+
+                    <thead>
+                    <tr>
+                        <th style="border-left: none">假期名称</th>
+                        <th>假期所属</th>
+                        <th>假期类型</th>
+                        <th>假期起始时间</th>
+                        <th>假期结束时间</th>
+                        <th>假期年份</th>
+                        <th style="border-right: none">状态</th>
+                    </tr>
+                    </thead>
+                    <tbody id="query_body">
+                    </tbody>
+                </table>
+
+            </div>
+
+        </div>
     </div>
 
     <div id="Index_Attend">
 
-        <h5>申请界面</h5>
+        <div style="width: 100%;height:160px;display: flex;justify-content: center;margin-bottom: 10px">
+
+            <div style="width: 66%;height: 100%;font-family: Auto_Pen,Serif,sans-serif">
+                <p style="font-size: 35px;color: #237F61">加入乐行学途!</p>
+                <p style="font-size: 15px;color: #000000">已加入学生:&nbsp;<span id="Attend_queryStudent"></span>&nbsp;人
+                </p>
+                <p style="font-size: 15px;color: #000000">已加入学院:&nbsp;<span id="Attend_queryCollege"></span>&nbsp;所
+                </p>
+            </div>
+
+        </div>
+        <div style="width: 100%;height: 560px;display: flex">
+
+            <div class="attend_Page" id="left_attend_Page">
+                <p>我是学生</p>
+                <Button id="attend_student_writeInfo">填写申请信息<img src="static/resources/index/writedown.png"
+                                                                       alt="writeDown"></Button>
+                <Button id="attend_student_checkState">查看申请情况<img src="static/resources/index/attendcheck.png"
+                                                                        alt="Check"></Button>
+                <div style="position: relative;width: 100%">
+                    <a id="attend_student_transfer" href="#">我想转学<img src="static/resources/index/transfer.png"
+                                                                          alt="transfer"></a>
+                </div>
+            </div>
+
+            <div class="attend_Page" id="right_attend_Page">
+                <p>我代表了学院</p>
+                <Button id="attend_college_writeInfo">填写申请信息<img src="static/resources/index/writedown.png"
+                                                                       alt="writeDown"></Button>
+                <Button id="attend_college_adopt">认领学院&nbsp;&nbsp;&nbsp;&nbsp;<img
+                        src="static/resources/index/attendadopt.png" alt="Adopt">
+                </Button>
+                <Button id="attend_college_checkState">查看申请情况<img src="static/resources/index/attendcheck.png"
+                                                                        alt="Check"></Button>
+                <div style="width: 100%;position: relative">
+                    <a id="attend_college_adoptIntent" href="#">什么是认领学院?</a>
+                </div>
+            </div>
+
+        </div>
 
     </div>
 
@@ -139,8 +222,55 @@
         integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim"
         crossorigin="anonymous"></script>
 <script src="static/Jquery/jquery-3.7.1.js"></script>
-<script src="static/Js/MainBackgroundAnimation.js"></script>
-<script src="static/Js/IndexBannerAnimation.js"></script>
-<script src="static/Js/IndexChangeAnimation.js"></script>
+<script src="static/Js/index/MainBackgroundAnimation.js"></script>
+<script src="static/Js/index/IndexBannerAnimation.js"></script>
+<script src="static/Js/index/IndexChangeAnimation.js"></script>
+<script src="static/Js/index/IndexQueryAnimation.js"></script>
+<script src="static/Js/index/IndexLoginController.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function () {
+        function queryCompleteTable() {
+            $.ajax({
+                url: "<%=request.getContextPath()%>/index-controller",
+                type: "POST",
+                data: {action: "attend_query"},
+                dataType: "text",
+                success: function (data) {
+                    $('#query_body').html(data);
+                }
+            });
+        }
+
+        function queryFilterTable() {
+            const filter_var = $('#filter_input').val();
+
+            $.ajax({
+                url: "<%=request.getContextPath()%>/index-controller",
+                type: "POST",
+                data: {action: "attend_query", filter: filter_var},
+                dataType: "text",
+                success: function (data) {
+                    $('#query_body').html(data);
+                }
+            });
+        }
+
+        document.addEventListener('keydown', function (event) {
+
+            if (event.key === 'Enter') {
+
+                if (document.getElementById('Index_Query').style.display === 'block') {
+                    queryFilterTable()
+                }
+
+            }
+
+        });
+
+        document.getElementById('QueryNavbarBtn').addEventListener('click', queryCompleteTable)
+        document.getElementById('filter_submit').addEventListener('click', queryFilterTable)
+        document.getElementById('filter_refresh').addEventListener('click', queryFilterTable)
+    });
+</script>
 </body>
 </html>

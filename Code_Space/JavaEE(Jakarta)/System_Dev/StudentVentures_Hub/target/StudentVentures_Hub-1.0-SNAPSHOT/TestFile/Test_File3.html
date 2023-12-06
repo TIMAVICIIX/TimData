@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Text Shake Animation on Button Click</title>
+  <style>
+    @keyframes shake {
+      0%, 100% {
+        transform: translateX(0);
+      }
+      25%, 75% {
+        transform: translateX(-5px);
+      }
+      50% {
+        transform: translateX(5px);
+      }
+    }
+
+    .hidden {
+      display: none;
+    }
+
+    p {
+      display: inline-block;
+    }
+  </style>
+</head>
+<body>
+
+<button onclick="showAndShake()">显示文本</button>
+<p id="shakingText" class="hidden">这是一段文本，可以左右快速抖动。</p>
+
+<script>
+  function showAndShake() {
+    const textElement = document.getElementById("shakingText");
+
+    // 显示文本
+    textElement.style.display = "inline-block";
+
+    // 添加抖动效果
+    textElement.style.animation = "shake 0.5s ease-in-out";
+
+    // 在动画结束后，移除抖动效果
+    textElement.addEventListener("animationend", () => {
+      textElement.style.animation = "none";
+    }, { once: true });
+  }
+</script>
+
+</body>
+</html>

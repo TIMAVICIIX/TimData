@@ -1,35 +1,23 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>不改变元素大小的缩放</title>
-  <style>
-    /* 使用百分比单位设置元素大小 */
-    .container {
-      width: 50%; /* 相对于视口宽度的50% */
-      margin: 0 auto; /* 水平居中 */
-      background-color: #f0f0f0;
-      padding: 20px;
-      box-sizing: border-box;
-    }
-
-    .box {
-      width: 50%; /* 相对于容器宽度的50% */
-      height: 100px;
-      background-color: #3498db;
-      margin: 20px 0;
-    }
-  </style>
+  <meta name="Generator" content="EditPlus®">
+  <meta name="Author" content="">
+  <meta name="Keywords" content="">
+  <meta name="Description" content="">
+  <title>省份与省市级联</title>
 </head>
-<body>
-
-<!-- 容器 -->
-<div class="container">
-  <!-- 相对于容器的大小 -->
-  <div class="box"></div>
-  <div class="box"></div>
-</div>
-
+<script src="province.js" type="text/javascript" charset="utf-8"></script>
+<body onload='getProvince()'>
+<label for="province"></label><select id="province" onchange="chooseProvince(this)">
+  <option value="1">请选择省</option>
+</select>
+<label for="city"></label><select id="city" onchange="chooseCity(this)">
+  <option value="2">请选择市</option>
+</select>
+<label for="area"></label><select id="area">
+  <option value="3">请选择区</option>
+</select>
 </body>
 </html>

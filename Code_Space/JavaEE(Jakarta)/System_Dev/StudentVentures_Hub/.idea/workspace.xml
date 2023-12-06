@@ -10,99 +10,76 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd535ab-5ac0-4a90-a809-ff49b6bbaa14" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/encodings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.mvn/wrapper/maven-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/mvnw.cmd" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/HelloServlet.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/jax_rs/TestData.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Page_Help&amp;Inquire/20231117_startedannounce.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Page_Help&amp;Inquire/20231121_help&amp;inquire.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File2.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/libs/mysql-connector-java-5.1.49.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Jquery/jquery-3.7.1.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/IndexBannerAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/IndexChangeAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/MainBackgroundAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-grid.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-reboot.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap-utilities.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.rtl.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.rtl.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.rtl.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.rtl.min.css.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.esm.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.esm.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.esm.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.esm.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.min.js.map" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/for_main.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/thridPartFont.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/fonts/autopens.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/background.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/Attend.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/Education.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/Help&amp;Inquire.jpg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/JoinUs.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/LXXT_Logo.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/NextOrPerv.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/air_Plane.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/check.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/inquire.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/login.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/submit.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/swiper_Banner/swiper-bundle.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/swiper_Banner/swiper-bundle.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/libraries/mysql_connector_java_5_1_49.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/BaseDao.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/dictionary/PublicVenture.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Class.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/College.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Poster.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Student.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/IndexController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/Page_homePage/poster_home.jsp" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File3.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/province.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/HomeSideBarAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexLoginController.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexQueryAnimation.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/for_home.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/example.jpg" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/上传头像.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/个人中心.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/切换账号.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/场景管理.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/学生管理.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/home/操作-收发登记.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/filterChose.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/resources/index/refresh.png" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/jax_rs/TestData.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/IndexBannerAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexBannerAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/IndexChangeAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexChangeAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/MainBackgroundAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/MainBackgroundAnimation.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/for_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/for_main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File.jsp" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File2.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/jax_rs/TestData.class" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/web.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/web.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/IndexBannerAnimation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/IndexChangeAnimation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/MainBackgroundAnimation.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_main.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/jax_rs/TestData.class" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="HTML File" />
+        <option value="Jsp File" />
+        <option value="CSS File" />
+        <option value="Kotlin Class" />
+        <option value="JavaScript File" />
+      </list>
+    </option>
+  </component>
   <component name="Git.Settings">
-    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/../../../.." />
   </component>
   <component name="LogFilters">
     <option name="FILTER_ERRORS" value="false" />
@@ -112,30 +89,53 @@
     <option name="CUSTOM_FILTER" />
   </component>
   <component name="ProjectId" id="2Ya4KzpCMHjFiw40iqSXKLn79Ky" />
-  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">{
   &quot;keyToString&quot;: {
+    &quot;ASKED_ADD_EXTERNAL_FILES&quot;: &quot;true&quot;,
+    &quot;DefaultHtmlFileTemplate&quot;: &quot;HTML File&quot;,
     &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;SHARE_PROJECT_CONFIGURATION_FILES&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
-    &quot;last_opened_file_path&quot;: &quot;D:/Git_Space/Code_Space/JavaEE(Jakarta)/System_Dev/StudentVentures_Hub/src/main/webapp/WEB-INF&quot;,
+    &quot;last_opened_file_path&quot;: &quot;D:/Git_Space/Code_Space/JavaEE(Jakarta)/System_Dev/StudentVentures_Hub/src/main/webapp/static/resources/home&quot;,
+    &quot;list.type.of.created.stylesheet&quot;: &quot;CSS&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
     &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;project.structure.last.edited&quot;: &quot;库&quot;,
+    &quot;project.structure.proportion&quot;: &quot;0.0&quot;,
+    &quot;project.structure.side.proportion&quot;: &quot;0.59885055&quot;,
+    &quot;run.code.analysis.last.selected.profile&quot;: &quot;pProject Default&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;java.sql.Driver&quot;
+    ]
   }
 }</component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\webapp\static\resources\home" />
+      <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\webapp\static\resources\index" />
       <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\webapp\WEB-INF" />
       <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\kotlin\com\svh\studentventures_hub" />
       <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\webapp" />
+    </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Git_Space\Code_Space\JavaEE(Jakarta)\System_Dev\StudentVentures_Hub\src\main\webapp\static\Js\index" />
+    </key>
+    <key name="MoveKotlinTopLevelDeclarationsDialog.RECENTS_KEY">
+      <recent name="com.svh.studentventures_hub.dao_party.dao_model" />
+      <recent name="com.svh.studentventures_hub.dao_party.model.info" />
     </key>
     <key name="CopyKotlinDeclarationDialog.RECENTS_KEY">
       <recent name="com.svh.studentventures_hub.hello" />
@@ -240,6 +240,29 @@
       <updated>1700750298384</updated>
       <workItem from="1700750299464" duration="654000" />
       <workItem from="1700751246634" duration="54000" />
+      <workItem from="1700836053724" duration="270000" />
+      <workItem from="1700900138731" duration="1201000" />
+      <workItem from="1700914099052" duration="1491000" />
+      <workItem from="1700982382131" duration="1661000" />
+      <workItem from="1700992034336" duration="2115000" />
+      <workItem from="1701002602496" duration="2504000" />
+      <workItem from="1701051998000" duration="2881000" />
+      <workItem from="1701087151423" duration="4708000" />
+      <workItem from="1701137051251" duration="5503000" />
+      <workItem from="1701159356021" duration="119000" />
+      <workItem from="1701168630772" duration="948000" />
+      <workItem from="1701238227397" duration="692000" />
+      <workItem from="1701331049540" duration="2328000" />
+      <workItem from="1701498802235" duration="6708000" />
+      <workItem from="1701587474994" duration="16938000" />
+      <workItem from="1701613053510" duration="2213000" />
+      <workItem from="1701680017360" duration="1207000" />
+      <workItem from="1701687348797" duration="13545000" />
+      <workItem from="1701741676416" duration="6014000" />
+      <workItem from="1701763116745" duration="7472000" />
+      <workItem from="1701774396549" duration="6557000" />
+      <workItem from="1701782498700" duration="1844000" />
+      <workItem from="1701860337528" duration="9636000" />
     </task>
     <servers />
   </component>
@@ -256,5 +279,8 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="VcsManagerConfiguration">
+    <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
   </component>
 </project>

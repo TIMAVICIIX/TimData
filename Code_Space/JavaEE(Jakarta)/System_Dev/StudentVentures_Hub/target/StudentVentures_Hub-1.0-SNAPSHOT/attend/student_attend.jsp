@@ -1,137 +1,79 @@
+<%@ page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <title>乐行学途-申请入学</title>
-    <link rel="icon" href="../static/resources/index/LXXT_Logo.png">
-    <link href="../static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css"
+    <link rel="icon" href="${pageContext.request.contextPath}/static/resources/index/LXXT_Logo.png">
+    <link href="${pageContext.request.contextPath}/static/bootstrap-5.3.0-alpha1-dist/css/bootstrap.min.css"
           rel="stylesheet"
           integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
-    <link href="../static/css/for_main.css" rel="stylesheet">
-    <link href="../static/css/for_home.css" rel="stylesheet">
-    <link href="../static/css/thridPartFont.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/css/for_main.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/css/for_home.css" rel="stylesheet">
+    <link href="${pageContext.request.contextPath}/static/css/thridPartFont.css" rel="stylesheet">
 </head>
-<body>
 
+<body>
 <div class="home_addNewMessage_Part" style="width: 100%;margin-top: 100px">
     <p style="color: #0b4862;font-size: 40px;margin-bottom: 0;margin-top: 10px;font-family: Auto_Pen, 黑体, Arial, sans-serif">
         !填写入学信息!</p>
 
-    <div class="addForm" id="stuAddForm">
+    <form name="addForm" class="addForm" id="stuAddForm" action="${pageContext.request.contextPath}/attend-controller" method="post">
 
-        <div class="addForm_div">学生姓名:<input id="stuAddName" class="addForm_input" type="text">
+        <div class="addForm_div">学生姓名:<input name="stuAddName" id="stuAddName" class="addForm_input" type="text">
         </div>
         <div class="addForm_div">学生性别:
-            <select id="stuAddSex" class="addForm_select">
+            <select name="stuAddSex" id="stuAddSex" class="addForm_select">
                 <option selected="selected" value="男">男</option>
                 <option value="女">女</option>
             </select>
         </div>
 
         <div class="addForm_div">所属学院:
-            <select id="stuAddCollege" class="addForm_select"
-                    onchange="addInfoSpecRequest()">
+            <select name="stuAddCollege" id="stuAddCollege" class="addForm_select"
+                    onchange="addInfoSpecRequest(this,'stuAddSpec')">
 
             </select>
         </div>
 
         <div class="addForm_div">所属专业:
-            <select id="stuAddSpec" class="addForm_select"
+            <select name="stuAddSpec" id="stuAddSpec" class="addForm_select"
                     onchange="addInfoClassRequest(this,'stuAddClass')">
 
             </select>
         </div>
 
         <div class="addForm_div">所属班级:
-            <select id="stuAddClass" class="addForm_select">
+            <select name="stuAddClass" id="stuAddClass" class="addForm_select">
 
             </select>
         </div>
 
-        <div class="addForm_div">联系方式:<input id="stuAddTelephone" type="number"
+        <div class="addForm_div" style="margin-bottom: 10px">联系方式:<input name="stuAddTelephone"  id="stuAddTelephone" type="number"
                                                  class="addForm_input"></div>
 
-        <div class="addForm_div">入学时间:
-            <select id="stuAddTime" class="addForm_select">
+        <div class="g-recaptcha" data-sitekey="6Lc5gj4pAAAAAKsjOj-BcxRcGO-iqlueMSgAwKir">
 
-            </select>
         </div>
 
         <div class="addForm_div">
-            <button id="newStudentAddBtn" class="NewConfirmBtn" onclick="saveNewInfo('Student')">
+            <button id="newStudentAddBtn" class="NewConfirmBtn" type="submit">
                 提&nbsp;交
             </button>
         </div>
-
-
-    </div>
-
-    <div class="addForm" id="classAddForm" style="display:none">
-
-        <div class="addForm_div">所属学院:
-            <select id="classAddCollege" class="addForm_select"
-                    onchange="addInfoSpecRequest(this,'classAddSpec')">
-
-            </select>
-        </div>
-
-        <div class="addForm_div">所属专业:
-            <select id="classAddSpec" class="addForm_select">
-
-            </select>
-        </div>
-
-        <div class="addForm_div">开班年份:
-            <select id="classAddYear" class="addForm_select">
-
-            </select>
-        </div>
-        <div class="addForm_div">班级名称:<input id="classAddName" class="addForm_input" type="text">
-        </div>
-
-        <div class="addForm_div">
-            <button id="newClassAddBtn" class="NewConfirmBtn" onclick="saveNewInfo('Class')">
-                提&nbsp;交
-            </button>
-        </div>
-
-    </div>
-
-    <div class="addForm" id="specAddForm" style="display:none;">
-
-        <div class="addForm_div">所属学院:
-            <select id="specAddCollege" class="addForm_select">
-
-            </select>
-        </div>
-
-        <div class="addForm_div">专业名称:<input id="specAddName" class="addForm_input" type="text">
-        </div>
-
-        <div class="addForm_div">
-            <button id="newSpecAddBtn" class="NewConfirmBtn" onclick="saveNewInfo('Spec')">
-                提&nbsp;交
-            </button>
-        </div>
-
-    </div>
+    </form>
 </div>
 
-
-<script src="../static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"
+<script src="${pageContext.request.contextPath}/static/bootstrap-5.3.0-alpha1-dist/js/bootstrap.bundle.min.js"
         integrity="sha384-/mhDoLbDldZc3qpsJHpLogda//BVZbgYuw6kof4u2FrCedxOtgRZDTHgHUhOCVim"
         crossorigin="anonymous"></script>
-<script src="../static/Jquery/jquery-3.7.1.js"></script>
-<script src="../static/Js/index/MainBackgroundAnimation.js"></script>
-<script src="../static/Js/index/IndexBannerAnimation.js"></script>
-<script src="../static/Js/index/IndexChangeAnimation.js"></script>
-<script src="../static/Js/index/IndexQueryAnimation.js"></script>
-<script src="../static/Js/index/IndexLoginController.js"></script>
+<script src="${pageContext.request.contextPath}/static/Jquery/jquery-3.7.1.js"></script>
+<script src='https://www.recaptcha.net/recaptcha/api.js'></script>
 <script>
     function addInfoCollegeRequest() {
 
         $.ajax({
-            url: '/StudentVentures_Hub/index-controller',
+            url: '/StudentVentures_Hub/attend_request-controller',
             dataType: 'text',
             type: 'POST',
             data: {
@@ -150,7 +92,7 @@
     function addInfoSpecRequest(onChangeSelect, responseSpecSelect) {
 
         $.ajax({
-            url: '/StudentVentures_Hub/index-controller',
+            url: '/StudentVentures_Hub/attend_request-controller',
             dataType: 'text',
             type: 'POST',
             data: {
@@ -169,7 +111,7 @@
 
     function addInfoClassRequest(onChangeSelect, responseClassSelect) {
         $.ajax({
-            url: '/StudentVentures_Hub/index-controller',
+            url: '/StudentVentures_Hub/attend_request-controller',
             dataType: 'text',
             type: 'POST',
             data: {
@@ -182,6 +124,12 @@
                 awakePrompt("ERROR", "班级选择请求", "请检查网络连接!", null, null);
             }
         });
+    }
+
+    const urlParams = new URLSearchParams(window.location.search);
+    const alertMessage = urlParams.get('alertMessage');
+    if (alertMessage) {
+        alert(decodeURIComponent(alertMessage));
     }
 
     addInfoCollegeRequest();

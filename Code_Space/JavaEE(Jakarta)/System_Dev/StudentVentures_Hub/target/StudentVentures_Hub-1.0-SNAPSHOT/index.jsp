@@ -307,10 +307,10 @@
         document.getElementById('QueryNavbarBtn').addEventListener('click', queryCompleteTable);
         document.getElementById('filter_submit_mainVentureQuery').addEventListener('click', queryFilterTable);
         document.getElementById('filter_refresh_mainVentureQuery').addEventListener('click', queryFilterTable);
-        document.getElementById("AttendNavbarBtn").addEventListener('click',queryStuAndCollegeNum);
+        document.getElementById("AttendNavbarBtn").addEventListener('click', queryStuAndCollegeNum);
 
-        document.getElementById("attend_student_writeInfo").addEventListener('click',function () {
-            window.open("<%=request.getContextPath()%>/attend/student_attend.html","_blank");
+        document.getElementById("attend_student_writeInfo").addEventListener('click', function () {
+            window.open("<%=request.getContextPath()%>/attend/student_attend.jsp", "_blank");
         })
     });
 </script>

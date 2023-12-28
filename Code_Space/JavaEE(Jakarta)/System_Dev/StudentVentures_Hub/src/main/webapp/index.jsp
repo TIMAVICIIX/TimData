@@ -310,7 +310,7 @@
         document.getElementById("AttendNavbarBtn").addEventListener('click', queryStuAndCollegeNum);
 
         document.getElementById("attend_student_writeInfo").addEventListener('click', function () {
-            window.open("<%=request.getContextPath()%>/attend/student_attend.html", "_blank");
+            window.open("<%=request.getContextPath()%>/attend/student_attend.jsp", "_blank");
         })
     });
 </script>

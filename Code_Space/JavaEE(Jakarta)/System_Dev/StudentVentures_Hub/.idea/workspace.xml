@@ -13,134 +13,26 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd535ab-5ac0-4a90-a809-ff49b6bbaa14" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/ClassDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/CollegeDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/SpecialityDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/StudentDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/UserStructMethod.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Speciality.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/listener/SessionManager.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/PosterHomeController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/StudentHomController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/UserController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Page_homePage/student_home.jsp" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/Robo_Fraternity_Club.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File4.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/User's_Avatar/21301210124.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/User's_Avatar/52284001.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/User's_Avatar/default.png" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/attend/student_attend.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/bootstrap/bootstrap-datetimepicker-chinese.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/bootstrap/bootstrap-datetimepicker.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/bootstrap/bootstrap.bundle.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/bootstrap/moment.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/home/HomeStuSideBarAnimation.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/home/HomeStudentManager.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/thirdPart/echarts.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/thirdPart/echarts.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/css/bootstrap/bootstrap-datetimepicker.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/css/layui.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/font/iconfont.eot" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/font/iconfont.svg" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/font/iconfont.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/font/iconfont.woff" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/font/iconfont.woff2" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/layui/layui.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/test.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/免责声明.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/static/layui-v2.9.2/官方文档.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/DjangoTest.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/db.sqlite3" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/admin.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/migrations/0001_initial.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/migrations/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/models.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/templates/index.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/main/views.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/manage.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/messege_board/__init__.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/messege_board/asgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/messege_board/settings.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/messege_board/urls.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/DjangoTest/messege_board/messege_board/wsgi.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/Study_Space/Snake.py" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/Study_Space/VonwaonBitmap-12px.ttf" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/../../../Python/Study_Temp/Study_Space/方正像素字体.TTF" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b05063d6-993c-4c02-9783-8216a937ca2a.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b05063d6-993c-4c02-9783-8216a937ca2a.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/misc.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/webContexts.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/webContexts.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/ReadyAttendDAO.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/ReadyAttend.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendRequestController.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/webapp/attend/attend_success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/BaseDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/BaseDao.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Class.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Class.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Poster.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Poster.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Student.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/Student.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/IndexController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/IndexController.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/Page_homePage/poster_home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Page_homePage/poster_home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File2.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File3.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/TestFile/Test_File3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/TestFile/province.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/thirdPart/province.js" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/CaptchaServlet.kt" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/attend/student_attend.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attend/student_attend.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/HomeSideBarAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/home/HomeSideBarAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexBannerAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexBannerAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexLoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexQueryAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/Js/index/IndexQueryAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/for_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/for_home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/css/for_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/static/css/for_main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/static/resources/home/example.jpg" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/User's_Avatar/52284000.png" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/Page_homePage/poster_home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/Page_homePage/poster_home.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File2.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File2.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File3.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/Test_File3.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/TestFile/province.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Poster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Poster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/info/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/servlet_controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/servlet_controller/IndexController.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/attend/student_attend.html" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/HomeSideBarAnimation.js" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexBannerAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexBannerAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexLoginController.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexLoginController.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexQueryAnimation.js" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/Js/index/IndexQueryAnimation.js" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_home.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_home.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_main.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/css/for_main.css" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/static/resources/home/example.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/PosterDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoStructMethod.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Class.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Class.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Poster.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Poster.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Student.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/info/Student.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/venture/Venture.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/object_model/venture/VentureRecord.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/servlet_controller/IndexController.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/servlet_controller/IndexController.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/Attend.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/Education.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/Help&amp;Inquire.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/LXXT_Logo.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/air_Plane.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/d783aa71c06688d34509e5ebd594fd4eaf64388d583d0-9CieNJ_fw1200.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/filterChose.png" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/../resource/jquery-3.7.1.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -154,8 +46,8 @@
         <option value="Kotlin Interface" />
         <option value="Jsp File" />
         <option value="JavaScript File" />
-        <option value="Kotlin Class" />
         <option value="HTML File" />
+        <option value="Kotlin Class" />
       </list>
     </option>
   </component>
@@ -398,12 +290,15 @@
       <workItem from="1703645804784" duration="3161000" />
       <workItem from="1703648970294" duration="37658000" />
       <workItem from="1703696995388" duration="580000" />
-      <workItem from="1703737628249" duration="472000" />
+      <workItem from="1703737628249" duration="11599000" />
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
     <option name="version" value="3" />
+  </component>
+  <component name="UnknownFeatures">
+    <option featureType="com.intellij.fileTypeFactory" implementationName=".env" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">

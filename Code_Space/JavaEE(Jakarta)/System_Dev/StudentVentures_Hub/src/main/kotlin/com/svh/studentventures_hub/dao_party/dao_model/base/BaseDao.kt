@@ -25,6 +25,11 @@ abstract class BaseDao {
 
     }
 
+    /***
+     * resultSet.use{
+     * 在对象使用结束后关闭对象
+     * }
+     */
     protected fun closeResources(resultSet: ResultSet?, preparedStatement: PreparedStatement?, connection: Connection?) {
 
         try {

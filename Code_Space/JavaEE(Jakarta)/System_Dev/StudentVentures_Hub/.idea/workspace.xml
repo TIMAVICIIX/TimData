@@ -13,26 +13,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="7cd535ab-5ac0-4a90-a809-ff49b6bbaa14" name="更改" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/ReadyAttendDAO.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/object_model/info/ReadyAttend.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendRequestController.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/webapp/attend/attend_success.jsp" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/CaptchaServlet.kt" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/attend/student_attend.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/attend/student_attend.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/webapp/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/WEB-INF/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/attend/student_attend.html" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/target/StudentVentures_Hub-1.0-SNAPSHOT/index.jsp" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/classpath.index" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/VentureRecordDAO.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools$Companion.class" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/com/svh/studentventures_hub/dao_party/dao_model/base/DaoTools.class" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/BaseDao.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/dao_party/dao_model/base/BaseDao.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendController.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/com/svh/studentventures_hub/servlet_controller/AttendController.kt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/webapp/Page_homePage/poster_home.jsp" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/webapp/Page_homePage/poster_home.jsp" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -290,7 +274,7 @@
       <workItem from="1703645804784" duration="3161000" />
       <workItem from="1703648970294" duration="37658000" />
       <workItem from="1703696995388" duration="580000" />
-      <workItem from="1703737628249" duration="11599000" />
+      <workItem from="1703737628249" duration="19867000" />
     </task>
     <servers />
   </component>

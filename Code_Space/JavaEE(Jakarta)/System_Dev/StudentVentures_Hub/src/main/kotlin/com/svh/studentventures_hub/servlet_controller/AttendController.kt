@@ -12,9 +12,21 @@ import java.time.Year
 @WebServlet(name = "AttendController", value = ["/attend-controller"])
 class AttendController : HttpServlet() {
 
-    override fun doPost(req: HttpServletRequest?, resp: HttpServletResponse?) {
+    override fun doGet(req: HttpServletRequest?, resp: HttpServletResponse?) {
+        if (req?.getParameter("stuAddName") == ""){
+            resp?.sendRedirect("attend/student_attend.jsp?alertMessage=无效的会话")
+            return
+        }
+    }
 
+    override fun doPost(req: HttpServletRequest?, resp: HttpServletResponse?) {
         req?.let {
+
+            if (it.getParameter("stuAddName") == ""){
+                resp?.sendRedirect("attend/student_attend.jsp?alertMessage=无效的会话")
+                return
+            }
+
             val siteKey = it.getParameter("g-recaptcha-response")
 
             if (DaoTools.verifyCaptcha(siteKey)) {
@@ -44,7 +56,7 @@ class AttendController : HttpServlet() {
                 ReadyAttendDAO().save(readyAttendObject)
                 it.session.setAttribute("ReadyCode", readyCode)
                 it.session.setAttribute("ReadyPassword", readyPassword)
-                req.getRequestDispatcher("/attend/attend_success.jsp").forward(req, resp)
+                it.getRequestDispatcher("/attend/attend_success.jsp").forward(req, resp)
                 return
 
 

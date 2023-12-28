@@ -1640,7 +1640,7 @@
                     } else if (response === "404") {
                         awakePrompt("ERROR", "操作失败", "404找不到对象", null, null);
                     } else {
-                        if (riskDataList['riskTarget'] === "student" && riskDataList['riskType'] === "resetPassword") {
+                        if (riskDataList['riskTarget'] === "student" && riskDataList['riskType'] === "resetStudentPassword") {
                             awakePrompt("SUCCESS", "重设密码操作", "重设密码操作成功,请记住密码并转达给该学生\n学生学籍号:" + riskDataList['riskCode'] + "\n学生密码:" + response, null, null);
                             queryInfos("student");
                         } else if (riskDataList['riskTarget'] === "student" && riskDataList['riskType'] === "delete") {

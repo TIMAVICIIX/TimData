@@ -19,6 +19,16 @@ document.addEventListener("DOMContentLoaded", function () {
         changeBanner(currentIndex);
     }
 
+    document.getElementById('banner_help').addEventListener('click',function (){
+        window.location.href="Page_Help&Inquire/20231121_help&inquire.html";
+    });
+    document.getElementById('banner_attend').addEventListener('click',function () {
+        document.getElementById('AttendNavbarBtn').click();
+    });
+    document.getElementById('JoinUs').addEventListener('click',function (){
+        window.location.href="Robo_Fraternity_Club.html";
+    });
+
     document.getElementById('NextBanner').addEventListener('click',function (){
         nextBanner();
     });

@@ -15,6 +15,12 @@ interface DaoStructMethod<T> {
 
     fun filterQuery(filterString:String):MutableList<T>
 
+    fun authFilterQuery(identityToken:String,filterString:String):MutableList<T>
+
     fun exactQuery(filterString:String):T?
+
+    fun filterCount(fileType:String,filterString: String):Int
+
+
 
 }

@@ -7,6 +7,17 @@ body {
     font-family: 黑体, Arial, sans-serif;
 }
 
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button{
+    -webkit-appearance: none !important;
+    margin: 0;
+}
+input:focus {
+    outline: none;
+}
+
+
+
 /*Animation*/
 #Background_Animation_Container {
     position: fixed;
@@ -383,7 +394,7 @@ body {
 }
 
 #loginForm{
-    margin-left: 11px;
+    margin-left: 16px;
 }
 
 @keyframes shake {
@@ -426,7 +437,7 @@ body {
 }
 
 /*Content Area.Check*/
-#filter_top {
+.filter_top {
     width: 100%;
     height: 70px;
 
@@ -435,7 +446,7 @@ body {
     align-items: center;
 }
 
-#filter_area {
+.filter_area {
     width: 90%;
     height: 80%;
 
@@ -448,7 +459,7 @@ body {
     align-items: center;
 }
 
-#filter_input {
+.filter_input {
     height: 90%;
     width: 480px;
 
@@ -462,7 +473,7 @@ body {
     font-size: 20px;
 }
 
-#filter_submit {
+.filter_submit {
     width: 30px;
     height: 30px;
 
@@ -477,11 +488,11 @@ body {
     align-items: center;
 }
 
-#filter_submit:active {
+.filter_submit:active {
     background-color: #2b575e;
 }
 
-#filter_refresh{
+.filter_refresh{
     width: 100px;
     height: 35px;
 
@@ -500,11 +511,11 @@ body {
     justify-content: center;
     align-items: center;
 }
-#filter_refresh:active{
+.filter_refresh:active{
     background-color: #2b575e;
 }
 
-#time_recorder {
+.time_recorder {
     width: 36%;
     height: 20%;
 
@@ -560,6 +571,10 @@ body {
 }
 .query_table td{
     border:none;
+}
+
+.small_td_font{
+    font-size: 15px;
 }
 
 /*Content Area.Attend*/

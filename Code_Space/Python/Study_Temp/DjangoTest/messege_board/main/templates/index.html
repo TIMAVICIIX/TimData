@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>网站</title>
+    <style>
+        .mb-plane{
+            padding:50px
+        }
+        .date{
+            float:right;
+            color:#ababab
+        }
+        .mb-item{
+            border-top:1px solid #eee;
+            min-height:100px;
+            margin:10px
+        }
+    </style>
+</head>
+<body>
+<div class="mb-plane">
+    <div>
+        <h1>留言板</h1>
+    </div>
+    <hr/>
+    {% if mbs %}
+    {% for mb in mbs %}
+    <div class="mb-item">
+        <div>
+            {{ mb.nickname }}
+        </div>
+        <div>
+            <p>{{mb.message_text}}</p>
+        </div>
+        <div class="date">
+            {{mb.pub_date}}
+        </div>
+    </div>
+    {% endfor %}
+    {% else %}
+    <div>
+        <p>没有数据</p>
+    </div>
+    {% endif %}
+</div>
+
+</body>
+</html>

@@ -59,7 +59,7 @@ $(document).ready(function () {
 
     document.addEventListener('keydown', function (event) {
 
-        if (event.key === 'Enter') {
+        if (event.key === 'Enter' && document.getElementById("Index_Login").style.display !== 'none') {
             loginBtn.click();
         }
 

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pie Chart with ECharts</title>
+    <!-- 引入 ECharts 库 -->
+    <script src="../static/Js/thirdPart/echarts.js"></script>
+</head>
+<body>
+
+<!-- 创建一个 div 元素用于放置饼状图 -->
+<div id="myPieChart" style="width: 400px; height: 400px;"></div>
+
+<script>
+    // 初始化 ECharts 实例
+    var myChart = echarts.init(document.getElementById('myPieChart'));
+
+    // 指定图表的配置项和数据
+    var option = {
+        title: {
+            text: 'Pie Chart Example',
+            left: 'center'
+        },
+        tooltip: {
+            trigger: 'item',
+            formatter: '{a} <br/>{b}: {c} ({d}%)'
+        },
+        series: [
+            {
+                name: 'Category',
+                type: 'pie',
+                radius: '50%',
+                label: {
+                    fontSize: 16, // 设置标签字体大小
+                    formatter: '{b}: {d}%'
+                },
+                data: [
+                    {value: 30, name: 'Category A'},
+                    {value: 40, name: 'Category B'},
+                    {value: 30, name: 'Category C'}
+                ],
+                emphasis: {
+                    itemStyle: {
+                        shadowBlur: 10,
+                        shadowOffsetX: 0,
+                        shadowColor: 'rgba(0, 0, 0, 0.5)'
+                    }
+                },
+                z: 2 // 避免被其他图形遮挡
+            }
+        ]
+    };
+
+    // 使用刚指定的配置项和数据显示图表
+    myChart.setOption(option);
+</script>
+
+</body>
+</html>

@@ -707,80 +707,79 @@
       <Engine>InnoDB</Engine>
       <CollationName>gb2312_chinese_ci</CollationName>
     </table>
-    <table id="211" parent="203" name="infoclass_students">
+    <table id="211" parent="203" name="infoclass_specialtys">
       <Engine>InnoDB</Engine>
       <CollationName>gb2312_chinese_ci</CollationName>
     </table>
-    <table id="212" parent="203" name="ventureclass_records">
+    <table id="212" parent="203" name="infoclass_students">
       <Engine>InnoDB</Engine>
       <CollationName>gb2312_chinese_ci</CollationName>
     </table>
-    <table id="213" parent="203" name="ventureclass_ventures">
+    <table id="213" parent="203" name="ventureclass_records">
       <Engine>InnoDB</Engine>
       <CollationName>gb2312_chinese_ci</CollationName>
     </table>
-    <column id="214" parent="207" name="VentureCode">
+    <table id="214" parent="203" name="ventureclass_ventures">
+      <Engine>InnoDB</Engine>
+      <CollationName>gb2312_chinese_ci</CollationName>
+    </table>
+    <column id="215" parent="207" name="VentureCode">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="215" parent="207" name="VentureName">
+    <column id="216" parent="207" name="VentureName">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="216" parent="207" name="VentureStartDate">
+    <column id="217" parent="207" name="VentureStartDate">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="217" parent="207" name="VentureEndDate">
+    <column id="218" parent="207" name="VentureEndDate">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="218" parent="207" name="PRIMARY">
+    <index id="219" parent="207" name="PRIMARY">
       <ColNames>VentureCode</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="219" parent="207" name="PRIMARY">
+    <key id="220" parent="207" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="220" parent="208" name="ClassCode">
+    <column id="221" parent="208" name="ClassCode">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="221" parent="208" name="HomeUCCode">
+    <column id="222" parent="208" name="SpecialtyCode">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="222" parent="208" name="ClassName">
+    <column id="223" parent="208" name="ClassName">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="223" parent="208" name="SpecialtyName">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <foreign-key id="224" parent="208" name="FK_infoclass-classes">
-      <ColNames>HomeUCCode</ColNames>
-      <RefColNames>CollegeCode</RefColNames>
-      <RefTableName>infoclass_colleges</RefTableName>
+    <foreign-key id="224" parent="208" name="FK_infoclass_classes">
+      <ColNames>SpecialtyCode</ColNames>
+      <RefColNames>SpecialityCode</RefColNames>
+      <RefTableName>infoclass_specialtys</RefTableName>
     </foreign-key>
     <index id="225" parent="208" name="PRIMARY">
       <ColNames>ClassCode</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <index id="226" parent="208" name="FK_infoclass-classes">
-      <ColNames>HomeUCCode</ColNames>
+    <index id="226" parent="208" name="FK_infoclass_classes">
+      <ColNames>SpecialtyCode</ColNames>
       <Type>btree</Type>
     </index>
     <key id="227" parent="208" name="PRIMARY">
@@ -828,121 +827,165 @@
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <index id="236" parent="210" name="PRIMARY">
+    <column id="236" parent="210" name="CookieCode">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <index id="237" parent="210" name="PRIMARY">
       <ColNames>PosterCode</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="237" parent="210" name="PRIMARY">
+    <key id="238" parent="210" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
     </key>
-    <column id="238" parent="211" name="StudentCode">
-      <DasType>varchar(64)|0s</DasType>
+    <column id="239" parent="211" name="SpecialityCode">
+      <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="239" parent="211" name="ClassCode">
-      <DasType>varchar(64)|0s</DasType>
+    <column id="240" parent="211" name="CollegeCode">
+      <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="240" parent="211" name="SutendentName">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>3</Position>
-    </column>
-    <column id="241" parent="211" name="StudentSex">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>4</Position>
-    </column>
-    <column id="242" parent="211" name="Telephone">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>5</Position>
-    </column>
-    <column id="243" parent="211" name="password">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>6</Position>
-    </column>
-    <column id="244" parent="211" name="StudentState">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>7</Position>
-    </column>
-    <foreign-key id="245" parent="211" name="FK_infoclass-students">
-      <ColNames>ClassCode</ColNames>
-      <RefColNames>ClassCode</RefColNames>
-      <RefTableName>infoclass_classes</RefTableName>
-    </foreign-key>
-    <index id="246" parent="211" name="PRIMARY">
-      <ColNames>StudentCode</ColNames>
-      <Type>btree</Type>
-      <Unique>1</Unique>
-    </index>
-    <index id="247" parent="211" name="FK_infoclass-students">
-      <ColNames>ClassCode</ColNames>
-      <Type>btree</Type>
-    </index>
-    <key id="248" parent="211" name="PRIMARY">
-      <NameSurrogate>1</NameSurrogate>
-      <Primary>1</Primary>
-      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
-    </key>
-    <column id="249" parent="212" name="studentcode">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>1</Position>
-    </column>
-    <column id="250" parent="212" name="venturecode">
-      <DasType>varchar(64)|0s</DasType>
-      <NotNull>1</NotNull>
-      <Position>2</Position>
-    </column>
-    <column id="251" parent="212" name="destination">
+    <column id="241" parent="211" name="SpecialtyName">
       <DasType>varchar(128)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="252" parent="213" name="VentureCode">
+    <foreign-key id="242" parent="211" name="FK_infoclass_specialtys">
+      <ColNames>CollegeCode</ColNames>
+      <RefColNames>CollegeCode</RefColNames>
+      <RefTableName>infoclass_colleges</RefTableName>
+    </foreign-key>
+    <index id="243" parent="211" name="PRIMARY">
+      <ColNames>SpecialityCode</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="244" parent="211" name="FK_infoclass_specialtys">
+      <ColNames>CollegeCode</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="245" parent="211" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="246" parent="212" name="StudentCode">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>1</Position>
     </column>
-    <column id="253" parent="213" name="VentureName">
+    <column id="247" parent="212" name="ClassCode">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>2</Position>
     </column>
-    <column id="254" parent="213" name="VentureStartDate">
+    <column id="248" parent="212" name="SutendentName">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>3</Position>
     </column>
-    <column id="255" parent="213" name="VentureEndDate">
+    <column id="249" parent="212" name="StudentSex">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>4</Position>
     </column>
-    <column id="256" parent="213" name="VentureBelong">
+    <column id="250" parent="212" name="Telephone">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>5</Position>
     </column>
-    <column id="257" parent="213" name="VentureDes">
+    <column id="251" parent="212" name="password">
       <DasType>varchar(64)|0s</DasType>
       <NotNull>1</NotNull>
       <Position>6</Position>
     </column>
-    <index id="258" parent="213" name="PRIMARY">
+    <column id="252" parent="212" name="StudentState">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>7</Position>
+    </column>
+    <column id="253" parent="212" name="CookieCode">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>8</Position>
+    </column>
+    <foreign-key id="254" parent="212" name="FK_infoclass_students">
+      <ColNames>ClassCode</ColNames>
+      <RefColNames>ClassCode</RefColNames>
+      <RefTableName>infoclass_classes</RefTableName>
+    </foreign-key>
+    <index id="255" parent="212" name="PRIMARY">
+      <ColNames>StudentCode</ColNames>
+      <Type>btree</Type>
+      <Unique>1</Unique>
+    </index>
+    <index id="256" parent="212" name="FK_infoclass_students">
+      <ColNames>ClassCode</ColNames>
+      <Type>btree</Type>
+    </index>
+    <key id="257" parent="212" name="PRIMARY">
+      <NameSurrogate>1</NameSurrogate>
+      <Primary>1</Primary>
+      <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>
+    </key>
+    <column id="258" parent="213" name="studentcode">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="259" parent="213" name="venturecode">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="260" parent="213" name="destination">
+      <DasType>varchar(128)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="261" parent="214" name="VentureCode">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>1</Position>
+    </column>
+    <column id="262" parent="214" name="VentureName">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>2</Position>
+    </column>
+    <column id="263" parent="214" name="VentureStartDate">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>3</Position>
+    </column>
+    <column id="264" parent="214" name="VentureEndDate">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>4</Position>
+    </column>
+    <column id="265" parent="214" name="VentureBelong">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>5</Position>
+    </column>
+    <column id="266" parent="214" name="VentureDes">
+      <DasType>varchar(64)|0s</DasType>
+      <NotNull>1</NotNull>
+      <Position>6</Position>
+    </column>
+    <index id="267" parent="214" name="PRIMARY">
       <ColNames>VentureCode</ColNames>
       <Type>btree</Type>
       <Unique>1</Unique>
     </index>
-    <key id="259" parent="213" name="PRIMARY">
+    <key id="268" parent="214" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
       <Primary>1</Primary>
       <UnderlyingIndexName>PRIMARY</UnderlyingIndexName>

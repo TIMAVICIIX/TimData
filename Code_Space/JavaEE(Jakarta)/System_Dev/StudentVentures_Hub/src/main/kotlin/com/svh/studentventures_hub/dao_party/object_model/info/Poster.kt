@@ -4,5 +4,6 @@ class Poster(
     val posterCode:String,
     var posterName:String,
     var managerTarget:String,
-    var password:String
+    var password:String,
+    var cookieCode:String
 )

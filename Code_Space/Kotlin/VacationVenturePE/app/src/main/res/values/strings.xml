@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">VacationVenturePE</string>
+    <string name="vacation_venture">乐行学途</string>
+    <string name="loginView_Account_input">学号:</string>
+    <string name="loginView_Password_input">密码:</string>
+    <string name="loginView_Account_hint">请输入学号</string>
+    <string name="loginView_Password_hint">请输入密码</string>
+    <string name="login_text">登录</string>
+</resources>

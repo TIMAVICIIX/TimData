@@ -12,9 +12,11 @@
     <color name="littler_green">#85CFAE</color>
     <color name="gray">#979797</color>
     <color name="tran_gray">#28979797</color>
+    <color name="deep_gray">#353535</color>
 
     <color name="login_green">#002C0E</color>
     <color name="login_btn_green">#18BCBE</color>
-    <color name="sensetive_green">#1D798A</color>
+    <color name="sensitive_green">#1D798A</color>
     <color name="hint_gray">#A7A7A7</color>
+
 </resources>

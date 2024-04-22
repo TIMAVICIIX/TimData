@@ -1,0 +1,136 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:isScrollContainer="true"
+    android:orientation="vertical"
+    android:background="@drawable/background"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <android.support.v7.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        app:cardElevation="10dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text="@string/unload_title"
+            android:gravity="center"
+            android:letterSpacing="0.4"
+            android:textSize="30sp"
+            android:background="@color/white"
+            android:textColor="@color/black"/>
+        
+    </android.support.v7.widget.CardView>
+    
+   
+
+    <LinearLayout
+        android:layout_marginTop="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/publisher"/>
+
+        <TextView
+            android:id="@+id/publisher_memo_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/unload_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/publish_time"/>
+
+        <TextView
+            android:id="@+id/publishTime_memo_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/unload_content"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/publish_target"/>
+
+        <TextView
+            android:id="@+id/publishTarget_memo_input"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:textColor="@color/login_green"
+            android:textSize="23sp"
+            android:gravity="center"
+            android:text="@string/unload_content"/>
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="30dp">
+
+        <View
+            android:layout_width="250dp"
+            android:layout_height="1dp"
+            android:layout_centerInParent="true"
+            android:background="@color/gray"/>
+
+    </RelativeLayout>
+
+    <TextView
+        android:id="@+id/publish_memo_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/example_text"
+        android:textSize="18sp"
+        android:textColor="@color/deep_gray"/>
+
+    <Button
+        android:id="@+id/btn_back_to_login"
+        android:layout_marginTop="10dp"
+        android:layout_width="200dp"
+        android:layout_height="70dp"
+        android:layout_gravity="center_horizontal"
+        android:background="@drawable/login_btn_board"
+        android:text="@string/back_login"
+        android:textColor="@color/white"
+        android:textSize="25sp"
+        android:letterSpacing="0.5"/>
+
+
+
+</LinearLayout>

@@ -1,9 +1,51 @@
 <resources>
     <string name="app_name">VacationVenturePE</string>
     <string name="vacation_venture">乐行学途</string>
+    <!--login_view-->
     <string name="loginView_Account_input">学号:</string>
     <string name="loginView_Password_input">密码:</string>
     <string name="loginView_Account_hint">请输入学号</string>
     <string name="loginView_Password_hint">请输入密码</string>
     <string name="login_text">登录</string>
+    <string name="login_tips">
+       点击登录默认阅读并同意
+    </string>
+    <string name="sensitive_tips">隐私政策</string>
+    <string name="and">与</string>
+    <string name="service_tips">服务条款</string>
+    <string name="unload">未加载</string>
+    <string name="Version" translatable="false">Version:</string>
+    <string name="unload_title">未加载的标题</string>
+    <string name="unload_content">未加载的内容</string>
+    <string name="example_text" translatable="false">沁园春·雪 \n北国风光，千里冰封，万里雪飘。\n望长城内外，惟余莽莽；大河上下，顿失滔滔。\n山舞银蛇，原驰蜡象，欲与天公试比高。\n须晴日，看红装素裹，分外妖娆。\n 江山如此多娇，引无数英雄竞折腰。\n惜秦皇汉武，略输文采；唐宗宋祖，稍逊风骚。\n一代天骄，成吉思汗，只识弯弓射大雕。\n俱往矣，数风流人物，还看今朝。</string>
+    <string name="back_login">返回登录</string>
+    <string name="publisher">发布人:</string>
+    <string name="publish_time">发布时间:</string>
+    <string name="publish_target">发布对象:</string>
+    <!--main_info-->
+    <string name="history_memo_navigation">历史记录</string>
+    <string name="target_memo_navigation">去向填写</string>
+    <string name="mine_navigation">我的</string>
+    <string name="vacation_writing">进入填写</string>
+    <string name="vacation_change">修改填写</string>
+    <string name="vacation_check">查看详情</string>
+    <string name="info_name">姓名</string>
+    <string name="info_college">所属学院</string>
+    <string name="info_spec">所属专业</string>
+    <string name="info_class">所属班级</string>
+    <string name="info_change_password">修改密码</string>
+    <string name="info_origin_password">原密码</string>
+    <string name="info_new_password">新密码</string>
+    <string name="info_origin_password_hint">请输入原密码</string>
+    <string name="info_new_password_hint">请输入新密码</string>
+    <string name="change_password_btn">更改密码</string>
+    <!--vacation_info-->
+    <string name="vacation_info_title">-假期信息-</string>
+    <string name="vacation_info_name">假期名称</string>
+    <string name="vacation_info_type">假期类型</string>
+    <string name="vacation_info_during">假期持续时间</string>
+    <!--write_info-->
+    <string name="target_title">---假期去向填写---</string>
+    <string name="leave">离校</string>
+    <string name="stay">留校</string>
 </resources>

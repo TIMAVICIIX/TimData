@@ -19,4 +19,6 @@
     <color name="sensitive_green">#1D798A</color>
     <color name="hint_gray">#A7A7A7</color>
 
+    <color name="cover_background">#C2FEF4</color>
+
 </resources>

@@ -48,4 +48,10 @@
     <string name="target_title">---假期去向填写---</string>
     <string name="leave">离校</string>
     <string name="stay">留校</string>
+    <string name="navigation_history">历史填写</string>
+    <string name="navigation_report">去向填写</string>
+    <string name="navigation_mine">我的</string>
+    <string name="example_version">Version:0.5.0 R&amp;D</string>
+
+    <string name="app_ch_name">乐行学途</string>
 </resources>

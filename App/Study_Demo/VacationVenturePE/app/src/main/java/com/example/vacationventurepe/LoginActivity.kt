@@ -1,15 +1,15 @@
 package com.example.vacationventurepe
 
-import android.content.Context
+
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
-import androidx.activity.ComponentActivity
+import com.example.vacationventurepe.basetools.BaseActivity
 
-class LoginActivity : ComponentActivity() {
+class LoginActivity : BaseActivity() {
 
-    private lateinit var userAccount:EditText
-    private lateinit var userPassword:EditText
+    private lateinit var userAccount: EditText
+    private lateinit var userPassword: EditText
 
     private lateinit var loginBtn: Button
 
@@ -25,12 +25,12 @@ class LoginActivity : ComponentActivity() {
 
     }
 
-    private fun initData(){
+    private fun initData() {
 
-        userAccount=findViewById(R.id.editText_account_input)
-        userPassword=findViewById(R.id.editText_password_input)
+        userAccount = findViewById(R.id.editText_account_input)
+        userPassword = findViewById(R.id.editText_password_input)
 
-        loginBtn=findViewById(R.id.login_btn)
+        loginBtn = findViewById(R.id.login_btn)
 
     }
 

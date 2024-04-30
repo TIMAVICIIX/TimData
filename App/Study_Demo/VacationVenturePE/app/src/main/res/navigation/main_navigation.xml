@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_navigation"
+    app:startDestination="@id/navigation_report_fragment">
+
+    <fragment
+        android:id="@+id/navigation_history_fragment"
+        android:name="com.example.vacationventurepe.fragments.mainactivity.MainHistoryFragment"
+        android:label="@string/navigation_history"
+        tools:layout="@layout/activity_main_fragment_history"
+        />
+
+    <fragment
+        android:id="@+id/navigation_report_fragment"
+        android:name="com.example.vacationventurepe.fragments.mainactivity.MainReportFragment"
+        android:label="@string/navigation_report"
+        tools:layout="@layout/activity_main_fragment_report"
+        />
+
+    <fragment
+        android:id="@+id/navigation_mine_fragment"
+        android:name="com.example.vacationventurepe.fragments.mainactivity.MainMineFragment"
+        android:label="@string/navigation_mine"
+        tools:layout="@layout/activity_main_fragment_mine"
+        />
+
+
+</navigation>

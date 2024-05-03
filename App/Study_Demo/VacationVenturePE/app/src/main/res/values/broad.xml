@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name = "broad_finish_activity">com.vacationventurepe.app.FINISH_ACTIVITY_BY_BROAD</string>
+</resources>

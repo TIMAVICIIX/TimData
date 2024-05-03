@@ -18,7 +18,7 @@
             android:text="@string/unload_title"
             android:gravity="center"
             android:letterSpacing="0.4"
-            android:textSize="30sp"
+            android:textSize="25sp"
             android:background="@color/white"
             android:textColor="@color/black"/>
         
@@ -30,7 +30,8 @@
         android:layout_marginTop="20dp"
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -54,7 +55,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -78,7 +80,8 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="40dp"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:paddingLeft="5dp">
 
         <TextView
             android:layout_width="wrap_content"
@@ -117,7 +120,8 @@
         android:layout_height="wrap_content"
         android:text="@string/example_text"
         android:textSize="18sp"
-        android:textColor="@color/deep_gray"/>
+        android:textColor="@color/deep_gray"
+        android:padding="10dp"/>
 
     <Button
         android:id="@+id/btn_back_to_login"
@@ -125,7 +129,7 @@
         android:layout_width="200dp"
         android:layout_height="70dp"
         android:layout_gravity="center_horizontal"
-        android:background="@drawable/login_btn_board"
+        android:background="@drawable/login_btn_anime"
         android:text="@string/back_login"
         android:textColor="@color/white"
         android:textSize="25sp"

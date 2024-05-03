@@ -9,9 +9,10 @@ import android.widget.ImageView
 import androidx.core.app.ActivityOptionsCompat
 import com.example.vacationventurepe.basetools.Base
 import com.example.vacationventurepe.basetools.BaseActivity
-import com.example.vacationventurepe.basetools.RoboActivity.roboStartActivity
+import com.example.vacationventurepe.basetools.RoboActivity.roboStartActivityWithFinishChoose
 import java.util.Timer
 import java.util.TimerTask
+import kotlin.random.Random
 
 class CoverActivity : BaseActivity() {
 
@@ -19,6 +20,7 @@ class CoverActivity : BaseActivity() {
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
+
         setContentView(R.layout.layout_cover)
 
         logoImage = findViewById(R.id.cover_logo)
@@ -26,35 +28,16 @@ class CoverActivity : BaseActivity() {
         val animationTask = object : TimerTask() {
             override fun run() {
                 runOnUiThread {
-                    setLogoAnime()
+                    if (Random.nextBoolean())
+                        setMainAnime()
+                    else
+                        setLogoAnime()
+
                 }
 
             }
         }
-
-        val finishTask = object : TimerTask() {
-            override fun run() {
-                runOnUiThread {
-                    val shareOption = ActivityOptionsCompat.makeSceneTransitionAnimation(
-                        this@CoverActivity,
-                        logoImage,
-                        "LogoTrans")
-
-                    this@CoverActivity.roboStartActivity<LoginActivity>(
-                        listOf(
-                            Pair(
-                                "animationType",
-                                Base.ANIMATION_FADE
-                            )
-                        ),shareOption.toBundle(),Base.START_TYPE_FINISH
-                    )
-                }
-            }
-        }
-
         Timer().schedule(animationTask, 1800)
-        Timer().schedule(finishTask, 2310)
-
 
     }
 
@@ -72,8 +55,71 @@ class CoverActivity : BaseActivity() {
         animatorSet.play(scaleYAnime).with(scaleXAnime).with(tranYAnime)
         animatorSet.duration = 500
 
+        animatorSet.addListener(object:AnimatorListenerAdapter(){
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                runOnUiThread {
+                    val shareOption = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        this@CoverActivity,
+                        logoImage,
+                        "LogoTrans"
+                    )
+
+                    this@CoverActivity.roboStartActivityWithFinishChoose<LoginActivity>(
+                        listOf(
+                            Pair(
+                                "animationType",
+                                Base.ANIMATION_FADE
+                            )
+                        ), shareOption.toBundle(), Base.START_TYPE_FINISH
+                    )
+                }
+            }
+        })
+
         animatorSet.start()
 
+
+
+    }
+
+    fun setMainAnime() {
+
+        val logoTranY = logoImage.y
+
+        val scaleXAnime = ObjectAnimator.ofFloat(logoImage, "scaleX", 1f, 0.85f)
+        val scaleYAnime = ObjectAnimator.ofFloat(logoImage, "ScaleY", 1f, 0.85f)
+
+        val tranYAnime = ObjectAnimator.ofFloat(logoImage, "translationY", 0f, logoTranY * 0.95f)
+
+        val animatorSet = AnimatorSet()
+
+        animatorSet.play(scaleXAnime).with(scaleYAnime).with(tranYAnime)
+        animatorSet.duration = 500
+
+        animatorSet.addListener(object:AnimatorListenerAdapter(){
+            override fun onAnimationEnd(animation: Animator) {
+                super.onAnimationEnd(animation)
+                runOnUiThread {
+                    val shareOption = ActivityOptionsCompat.makeSceneTransitionAnimation(
+                        this@CoverActivity,
+                        logoImage,
+                        "LogoTrans"
+                    )
+
+                    this@CoverActivity.roboStartActivityWithFinishChoose<MainActivity>(
+                        listOf(
+                            Pair(
+                                "animationType",
+                                Base.ANIMATION_FADE
+                            )
+                        ), shareOption.toBundle(), Base.START_TYPE_FINISH
+                    )
+                }
+            }
+        })
+
+        animatorSet.start()
     }
 
 }
